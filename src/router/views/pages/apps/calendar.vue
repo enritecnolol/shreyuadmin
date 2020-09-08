@@ -170,13 +170,13 @@ export default {
 							<div class="col-xl-10 col-lg-9">
 								<div class="mt-4 mt-lg-0">
 									<h5 class="mt-0 mb-1 font-weight-bold"
-										>Welcome to Your Calendar</h5
+										>Bienvenido a tu calendario</h5
 									>
 									<p class="text-muted mb-2">
-										The calendar shows the events synced from all your linked
-										calendars. Click on event to see or edit the details. You
-										can create new event by clicking on "Create New event"
-										button or any cell available in calendar below.
+										El calendario muestra los eventos sincronizados de todos sus enlaces
+										calendarios. Haga clic en el evento para ver o editar los detalles. Tú
+										puede crear un nuevo evento haciendo clic en "Crear nuevo evento"
+										botón o cualquier celda disponible en el calendario a continuación.
 									</p>
 
 									<button
@@ -184,10 +184,10 @@ export default {
 										class="btn btn-primary mt-2 mr-1"
 										@click="showmodal = true"
 									>
-										<i class="uil-plus-circle"></i> Create New Event
+										<i class="uil-plus-circle"></i> Crear nuevo evento
 									</button>
 									<button class="btn btn-white mt-2">
-										<i class="uil-sync"></i> Link Calendars
+										<i class="uil-sync"></i> Calendarios de enlaces
 									</button>
 								</div>
 							</div>
@@ -215,13 +215,13 @@ export default {
 									right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
 								}"
 								:button-text="{
-									today: 'Today',
-									month: 'Month',
-									week: 'Week',
-									day: 'Day',
-									list: 'List',
-									prev: 'Prev',
-									next: 'Next',
+									today: 'Hoy',
+									month: 'Mes',
+									week: 'Semana',
+									day: 'Día',
+									list: 'Lista',
+									prev: 'Anterior',
+									next: 'Siguiente',
 								}"
 								:bootstrap-font-awesome="false"
 								:editable="true"
@@ -260,13 +260,13 @@ export default {
 							<div
 								v-if="submitted && !$v.event.title.required"
 								class="invalid-feedback"
-								>This value is required.</div
+								>Este valor es requerido.</div
 							>
 						</div>
 					</div>
 					<div class="col-12">
 						<div class="form-group">
-							<label class="control-label">Category</label>
+							<label class="control-label">Categoría</label>
 							<select
 								v-model="event.category"
 								class="form-control"
@@ -283,16 +283,16 @@ export default {
 							<div
 								v-if="submitted && !$v.event.category.required"
 								class="invalid-feedback"
-								>This value is required.</div
+								>Este valor es requerido.</div
 							>
 						</div>
 					</div>
 				</div>
 
 				<div class="text-right">
-					<button type="submit" class="btn btn-success">Save</button>
+					<button type="submit" class="btn btn-success">Guardar</button>
 					<b-button class="ml-1" variant="light" @click="hideModal"
-						>Close</b-button
+						>Cerrar</b-button
 					>
 				</div>
 			</form>
@@ -308,7 +308,7 @@ export default {
 		>
 			<form @submit.prevent="editSubmit">
 				<div class="p-3">
-					<label>Change event name</label>
+					<label>Cambiar nombre de evento</label>
 					<div class="input-group m-b-15">
 						<input
 							v-model="editevent.editTitle"
@@ -317,15 +317,15 @@ export default {
 						/>
 						<span class="input-group-append">
 							<button type="submit" class="btn btn-success btn-md">
-								<i class="fa fa-check"></i> Save
+								<i class="fa fa-check"></i> Guardar
 							</button>
 						</span>
 					</div>
 				</div>
 				<div class="text-right p-3">
-					<b-button variant="light" @click="closeModal">Close</b-button>
+					<b-button variant="light" @click="closeModal">Cerrar</b-button>
 					<b-button class="ml-1" variant="danger" @click="deleteEvent"
-						>Delete</b-button
+						>Borrar</b-button
 					>
 				</div>
 			</form>

@@ -120,7 +120,7 @@ const dashboardRoutes = [
   {
     path: '/',
     name: 'Dashboard',
-    header: 'Navigation',
+    header: 'Navegación',
     icon: 'home',
     badge: {
       text: '1',
@@ -136,7 +136,7 @@ const dashboardRoutes = [
 const calendarAppsRoutes = [
   {
     path: '/apps/calendar',
-    name: 'Calendar',
+    name: 'Calendario',
     header: 'Apps',
     icon: 'calendar',
     component: () => lazyLoadView(import('@views/pages/apps/calendar')),
@@ -187,7 +187,7 @@ const emailAppsRoutes = [
 const projectAppsRoutes = [
   {
     path: '/apps/project',
-    name: 'Project',
+    name: 'Proyecto',
     icon: 'briefcase',
     meta: { authRequired: true },
     // create a container component
@@ -219,7 +219,7 @@ const projectAppsRoutes = [
 const taskAppsRoutes = [
   {
     path: '/apps/task',
-    name: 'Task',
+    name: 'Tareas',
     icon: 'bookmark',
     meta: { authRequired: true },
     // create a container component
@@ -259,7 +259,7 @@ const appsRoutes = [
 const pagesRoutes = [
   {
     path: '/pages',
-    name: 'Pages',
+    name: 'Paginas',
     icon: 'file-text',
     header: 'Custom',
     meta: { authRequired: true },
@@ -304,9 +304,9 @@ const pagesRoutes = [
 const uiRoutes = [
   {
     path: '/ui',
-    name: 'UI Elements',
+    name: 'UI Elementos',
     icon: 'package',
-    header: 'Components',
+    header: 'Componentes',
     meta: { authRequired: true },
     // create a container component
     component: {
@@ -357,7 +357,7 @@ const uiRoutes = [
 const formsRoutes = [
   {
     path: '/forms',
-    name: 'Forms',
+    name: 'Formularios',
     icon: 'file-text',
     meta: { authRequired: true },
     // create a container component
@@ -406,7 +406,7 @@ const formsRoutes = [
 const tablesRoutes = [
   {
     path: '/tables',
-    name: 'Tables',
+    name: 'Tablas',
     icon: 'grid',
     meta: { authRequired: true },
     // create a container component

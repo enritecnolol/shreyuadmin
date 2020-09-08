@@ -144,7 +144,7 @@ export default {
 					<!-- in progress tasks -->
 					<div class="tasks border">
 						<h5 class="mt-0 task-header header-title"
-							>In Progress
+							>En Progreso
 							<span class="font-size-13">({{ inProgressTasks.length }})</span>
 						</h5>
 
@@ -163,7 +163,7 @@ export default {
 					<!-- review tasks -->
 					<div class="tasks border">
 						<h5 class="mt-0 task-header header-title"
-							>Review
+							>Revisión
 							<span class="font-size-13">({{ reviewTasks.length }})</span>
 						</h5>
 
@@ -182,7 +182,7 @@ export default {
 					<!-- done tasks -->
 					<div class="tasks border">
 						<h5 class="mt-0 task-header header-title"
-							>Done
+							>Hecho
 							<span class="font-size-13">({{ doneTasks.length }})</span>
 						</h5>
 

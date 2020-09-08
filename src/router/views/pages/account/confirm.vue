@@ -31,19 +31,19 @@ export default {
             </div>
 
             <div class="mt-3 text-center">
-              <h3>Your account is registered successfully</h3>
+              <h3>Su cuenta está registrada correctamente</h3>
               <p class="text-muted mt-2">
-                A email has been send to
-                <span class="font-weight-medium">youremail@domain.com</span>.
-                Please check for an email from company and click on the included
-                link to reset your password.
+               Se ha enviado un correo electrónico a
+                <span class="font-weight-medium">ejemplo@gmail.com</span>.
+                Compruebe si hay un correo electrónico de la empresa y haga clic en el
+                enlace para restablecer su contraseña.
               </p>
 
               <router-link
                 tag="a"
                 to="/login"
                 class="btn btn-block btn-primary waves-effect waves-light mt-3"
-                >Back to Home</router-link
+                >Volver a inicio</router-link
               >
             </div>
           </div>

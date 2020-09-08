@@ -56,7 +56,7 @@ export default {
                 <div class="row">
                   <div class="col-sm-3">
                     <a href="javascript: void(0);" class="btn btn-primary">
-                      <i class="uil uil-plus mr-1"></i>Add New
+                      <i class="uil uil-plus mr-1"></i>Agregar
                     </a>
                   </div>
                   <div class="col-sm-9">
@@ -69,7 +69,7 @@ export default {
                             <input
                               type="text"
                               class="form-control search-input"
-                              placeholder="Search..."
+                              placeholder="Buscar..."
                             />
                             <span class="uil uil-search icon-search"></span>
                             <div class="input-group-append">

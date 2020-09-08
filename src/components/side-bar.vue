@@ -103,7 +103,7 @@ export default {
 
 			<div class="media-body">
 				<h6 class="pro-user-name mt-0 mb-0">{{ user.name }}</h6>
-				<span class="pro-user-desc">Administrator</span>
+				<span class="pro-user-desc">Administrador</span>
 			</div>
 			<b-dropdown variant="black" class="align-self-center" toggle-class="p-0">
 				<template v-slot:button-content>
@@ -115,7 +115,7 @@ export default {
 						type="user"
 						class="icon-dual icon-xs mr-2 align-middle"
 					></feather>
-					<span>My Account</span>
+					<span>Mi cuenta</span>
 				</b-dropdown-item>
 
 				<b-dropdown-item href="javascript:void(0);" class="notify-item">
@@ -123,7 +123,7 @@ export default {
 						type="settings"
 						class="icon-dual icon-xs mr-2 align-middle"
 					></feather>
-					<span>Settings</span>
+					<span>Configuración</span>
 				</b-dropdown-item>
 
 				<b-dropdown-item href="javascript:void(0);" class="notify-item">
@@ -131,7 +131,7 @@ export default {
 						type="help-circle"
 						class="icon-dual icon-xs mr-2 align-middle"
 					></feather>
-					<span>Support</span>
+					<span>Soporte</span>
 				</b-dropdown-item>
 
 				<b-dropdown-item href="javascript: void(0);" class="notify-item">
@@ -139,7 +139,7 @@ export default {
 						type="lock"
 						class="icon-dual icon-xs mr-2 align-middle"
 					></feather>
-					<span>Lock Screen</span>
+					<span>Bloquear Pantalla</span>
 				</b-dropdown-item>
 
 				<b-dropdown-divider></b-dropdown-divider>
@@ -149,7 +149,7 @@ export default {
 						type="log-out"
 						class="icon-dual icon-xs mr-2 align-middle"
 					></feather>
-					<span>Logout</span>
+					<span>Cerrar Sesión</span>
 				</b-dropdown-item>
 			</b-dropdown>
 		</div>
