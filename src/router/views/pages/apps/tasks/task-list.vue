@@ -100,7 +100,6 @@ export default {
                                                     </div>
                                                 </form>
                                             </div>
-
                                             <b-dropdown id="sort-act" class="d-inline-block" right>
                                                 <template v-slot:button-content>
                                                     <i class="uil uil-sort-amount-down"></i>

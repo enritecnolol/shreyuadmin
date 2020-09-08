@@ -71,8 +71,8 @@ export default {
 
 										<h6 class="h5 mb-0 mt-4">Reset Password</h6>
 										<p class="text-muted mt-1 mb-5"
-											>Enter your email address and we'll send you an email with
-											instructions to reset your password.</p
+											>Ingrese su dirección de correo electrónico y le enviaremos un correo electrónico con
+instrucciones para restablecer su contraseña</p
 										>
 
 										<b-alert
@@ -94,7 +94,7 @@ export default {
 											@submit.prevent="tryToReset"
 										>
 											<div class="form-group">
-												<label class="form-control-label">Email Address</label>
+												<label class="form-control-label">Email</label>
 												<div class="input-group input-group-merge">
 													<div class="input-group-prepend">
 														<span class="input-group-text">
@@ -106,14 +106,14 @@ export default {
 														v-model="email"
 														type="email"
 														class="form-control"
-														placeholder="hello@coderthemes.com"
+														placeholder="ejemplo@gmail.com"
 													/>
 												</div>
 											</div>
 
 											<div class="form-group mb-0 text-center">
 												<button class="btn btn-primary btn-block" type="submit"
-													>Submit</button
+													>Enviar</button
 												>
 											</div>
 										</form>
@@ -123,12 +123,12 @@ export default {
 											<div class="overlay"></div>
 											<div class="auth-user-testimonial">
 												<p class="font-size-24 font-weight-bold text-white mb-1"
-													>I simply love it!</p
+													>Simple!</p
 												>
 												<p class="lead"
-													>"It's a elegent templete. I love it very much!"</p
+													>"Texto"</p
 												>
-												<p>- Admin User</p>
+												<p>- Administrador</p>
 											</div>
 										</div>
 									</div>
@@ -141,7 +141,7 @@ export default {
 						<div class="row mt-3">
 							<div class="col-12 text-center">
 								<p class="text-muted">
-									Back to
+									Volver a
 									<router-link
 										tag="a"
 										to="/login"

@@ -47,106 +47,106 @@ export default {
 					class: 'border-bottom py-4',
 					icon: 'users',
 					value: '121,000',
-					title: 'Total Visitors',
+					title: 'Total Visitantes',
 				},
 				{
 					class: 'border-bottom py-4',
 					icon: 'image',
 					value: '21,000',
-					title: 'Total Product Views',
+					title: 'Total Vistas Producto',
 				},
 				{
 					class: 'py-4',
 					icon: 'shopping-bag',
 					value: '$21.5',
-					title: 'Revenue Per Visitor',
+					title: 'Ingresos Por Visitantes',
 				},
 			],
 			membersData: [
 				{
 					image: require('@assets/images/users/avatar-7.jpg'),
-					text: 'Senior Sales Guy',
+					text: 'Senior Ventas',
 					name: 'Shreyu N',
 				},
 				{
 					image: require('@assets/images/users/avatar-9.jpg'),
-					text: 'Social Media Campaign',
+					text: 'Campaña De Redes Sociales',
 					name: 'Greeva Y',
 				},
 				{
 					image: require('@assets/images/users/avatar-4.jpg'),
-					text: 'Inventory Manager',
+					text: 'Gerente De Inventario',
 					name: 'Nik G',
 				},
 				{
 					image: require('@assets/images/users/avatar-1.jpg'),
-					text: 'Sales Persons',
+					text: 'Vendedor',
 					name: 'Hardik G',
 				},
 				{
 					image: require('@assets/images/users/avatar-2.jpg'),
-					text: 'Sales Persons',
+					text: 'Vendedor',
 					name: 'Stive K',
 				},
 			],
 			tasksData: [
 				{
-					title: 'Draft the new contract document for sales team',
-					text: 'Due on 24 Aug, 2019',
+					title: 'Redactar el nuevo documento de contrato para el equipo de ventas.',
+					text: 'Fecha límite el 24 de agosto de 2020',
 					id: 1,
 				},
 				{
-					title: 'iOS App home page',
-					text: 'Due on 23 Aug, 2019',
+					title: 'Pagina de inicio para la app',
+					text: 'Fecha límite el 24 de agosto de 2020',
 					id: 2,
 				},
 				{
-					title: 'Write a release note for Shreyu',
-					text: 'Due on 22 Aug, 2019',
+					title: 'Escribir nota de lanzamiento para Nick',
+					text: 'Fecha límite el 24 de agosto de 2020',
 					id: 3,
 				},
 				{
-					title: 'Invite Greeva to a project shreyu admin',
-					text: 'Due on 21 Aug, 2019',
+					title: 'Invitar a Nick al proyecto',
+					text: 'Fecha límite el 24 de agosto de 2020',
 					id: 4,
 				},
 				{
-					title: 'Enable analytics tracking for main website',
-					text: 'Due on 20 Aug, 2019',
+					title: 'Habilite el seguimiento de análisis para el sitio web principal',
+					text: 'Fecha límite el 24 de agosto de 2020',
 					id: 5,
 				},
 				{
-					title: 'Invite user to a project',
-					text: 'Due on 28 Aug, 2019',
+					title: 'Invitar usuario al proyecto',
+					text: 'Fecha límite el 24 de agosto de 2020',
 					id: 6,
 				},
 				{
-					title: 'Write a release note',
-					text: 'Due on 14 Aug, 2019',
+					title: 'Escribe una nota de lanzamiento',
+					text: 'Fecha límite el 24 de agosto de 2020',
 					id: 7,
 				},
 			],
 			statChart: [
 				{
-					mainTitle: 'today revenue',
+					mainTitle: 'Ingresos De Hoy',
 					value: 2100,
 					subValue: '10.21%',
 					chartColor: '#5369f8',
 				},
 				{
-					mainTitle: 'product sold',
+					mainTitle: 'Productos Vendidos',
 					value: 1065,
 					subValue: '5.05%',
 					chartColor: '#f77e53',
 				},
 				{
-					mainTitle: 'New customers',
+					mainTitle: 'Nuevos Clientes',
 					value: 11,
 					subValue: '25.16%',
 					chartColor: '#43d39e',
 				},
 				{
-					mainTitle: 'new visitors',
+					mainTitle: 'Nuevos Visitantes',
 					value: 750,
 					subValue: '5.05%',
 					chartColor: '#ffbe0b',
@@ -157,28 +157,28 @@ export default {
 					id: 1,
 					image: require('@assets/images/users/avatar-9.jpg'),
 					name: 'Greeva',
-					message: 'Hello!',
+					message: 'Hola!',
 					time: '10:00',
 				},
 				{
 					id: 2,
 					image: require('@assets/images/users/avatar-7.jpg'),
 					name: 'Shreyu',
-					message: 'Hi, How are you? What about our next meeting?',
+					message: 'Qué tal?',
 					time: '10:01',
 				},
 				{
 					id: 3,
 					image: require('@assets/images/users/avatar-9.jpg'),
 					name: 'Greeva',
-					message: 'Yeah everything is fine',
+					message: 'Todo bien',
 					time: '10:01',
 				},
 				{
 					id: 4,
 					image: require('@assets/images/users/avatar-7.jpg'),
 					name: 'Shreyu',
-					message: 'Awesome! let me know if we can talk in 20 min',
+					message: 'Que bueno!',
 					time: '10:02',
 				},
 			],
@@ -210,7 +210,7 @@ export default {
 					<div class="btn-group">
 						<b-dropdown variant="primary" right>
 							<template v-slot:button-content>
-								<i class="uil uil-file-alt mr-1"></i>Download
+								<i class="uil uil-file-alt mr-1"></i>Descargar
 								<i class="icon">
 									<feather type="chevron-down" class="align-middle"></feather>
 								</i>
@@ -227,7 +227,7 @@ export default {
 									type="printer"
 									class="icon-dual icon-xs mr-2 align-middle"
 								></feather>
-								<span>Print</span>
+								<span>Imprimir</span>
 							</b-dropdown-item>
 							<b-dropdown-divider></b-dropdown-divider>
 							<b-dropdown-item href="#" class="notify-item">
@@ -235,7 +235,7 @@ export default {
 									type="file"
 									class="icon-dual icon-xs mr-2 align-middle"
 								></feather>
-								<span>Re-Generate</span>
+								<span>Re-Generar</span>
 							</b-dropdown-item>
 						</b-dropdown>
 					</div>
@@ -269,7 +269,7 @@ export default {
 						<ul class="nav card-nav float-right">
 							<li class="nav-item">
 								<a class="nav-link text-muted" href="javascript: void(0);"
-									>Today</a
+									>HOY</a
 								>
 							</li>
 							<li class="nav-item">
@@ -291,7 +291,7 @@ export default {
 								>
 							</li>
 						</ul>
-						<h5 class="card-title mb-0 header-title">Revenue</h5>
+						<h5 class="card-title mb-0 header-title">Ingresos</h5>
 						<!-- Revenue Area Chart -->
 						<apexchart
 							type="area"
@@ -307,7 +307,7 @@ export default {
 			<div class="col-xl-3">
 				<div class="card">
 					<div class="card-body pb-0">
-						<h5 class="card-title header-title">Targets</h5>
+						<h5 class="card-title header-title">Objetivos</h5>
 						<!-- Target Radialbar chart -->
 						<div class="mt-3">
 							<apexchart
@@ -327,7 +327,7 @@ export default {
 			<div class="col-xl-5">
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title mt-0 pb-2 header-title">Sales By Category</h5>
+						<h5 class="card-title mt-0 pb-2 header-title">Ventas Por Categorías</h5>
 						<!-- Sales donut chart -->
 						<apexchart
 							type="donut"
@@ -346,18 +346,18 @@ export default {
 							href="javascript: void(0);"
 							class="btn btn-primary btn-sm float-right"
 						>
-							<i class="uil uil-export ml-1"></i> Export
+							<i class="uil uil-export ml-1"></i> Exportar
 						</a>
-						<h5 class="card-title mt-0 mb-0 header-title">Recent Orders</h5>
+						<h5 class="card-title mt-0 mb-0 header-title">Ordenes Recientes</h5>
 						<div class="table-responsive mt-4 mb-0">
 							<b-table-simple class="table table-hover table-nowrap mb-0">
 								<b-thead class="thead-white">
 									<b-tr>
 										<b-th>#</b-th>
-										<b-th>Product</b-th>
-										<b-th>Customer</b-th>
-										<b-th>Price</b-th>
-										<b-th>Status</b-th>
+										<b-th>Producto</b-th>
+										<b-th>Cliente</b-th>
+										<b-th>Precio</b-th>
+										<b-th>Estado</b-th>
 									</b-tr>
 								</b-thead>
 								<b-tbody>
@@ -391,7 +391,7 @@ export default {
 			<div class="col-xl-4">
 				<div class="card">
 					<div class="card-body pt-2 pb-2">
-						<h5 class="mb-4 header-title">Top Performers</h5>
+						<h5 class="mb-4 header-title">Top Rendimiento</h5>
 						<div v-for="member of membersData" :key="member.name">
 							<Member
 								:image="member.image"
@@ -409,9 +409,9 @@ export default {
 						<router-link
 							to="/task/list"
 							class="btn btn-primary btn-sm mt-2 float-right"
-							>View All</router-link
+							>Ver Todo</router-link
 						>
-						<h5 class="mb-4 header-title">Tasks</h5>
+						<h5 class="mb-4 header-title">Tareas</h5>
 
 						<VuePerfectScrollbar style="max-height: 390px;">
 							<div>
@@ -428,7 +428,7 @@ export default {
 				<Chat
 					:chat-window-height="maxHeight"
 					:messages="chatMessages"
-					title="Recent Conversation"
+					title="Conversacion reciente"
 				/>
 			</div>
 		</div>

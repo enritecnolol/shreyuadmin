@@ -73,14 +73,14 @@ export default {
 											</a>
 										</div>
 
-										<h6 class="h5 mb-0 mt-4">Create your account</h6>
+										<h6 class="h5 mb-0 mt-4">Crea tu cuenta</h6>
 										<p class="text-muted mt-0 mb-4"
-											>Create a free account and start using Shreyu</p
+											>Crea tu cuenta para usar el sistema</p
 										>
 
 										<form action="#" class="authentication-form">
 											<div class="form-group">
-												<label class="form-control-label">Name</label>
+												<label class="form-control-label">Nombre</label>
 												<div class="input-group input-group-merge">
 													<div class="input-group-prepend">
 														<span class="input-group-text">
@@ -91,14 +91,14 @@ export default {
 														id="name"
 														type="text"
 														class="form-control"
-														placeholder="Your full name"
+														placeholder="Tu nombre completo"
 														required
 													/>
 												</div>
 											</div>
 
 											<div class="form-group">
-												<label class="form-control-label">Email Address</label>
+												<label class="form-control-label">Email</label>
 												<div class="input-group input-group-merge">
 													<div class="input-group-prepend">
 														<span class="input-group-text">
@@ -109,13 +109,13 @@ export default {
 														id="email"
 														type="email"
 														class="form-control"
-														placeholder="hello@coderthemes.com"
+														placeholder="ejemplo@gmail.com"
 													/>
 												</div>
 											</div>
 
 											<div class="form-group">
-												<label class="form-control-label">Password</label>
+												<label class="form-control-label">Contraseña</label>
 												<div class="input-group input-group-merge">
 													<div class="input-group-prepend">
 														<span class="input-group-text">
@@ -126,7 +126,7 @@ export default {
 														id="password"
 														type="password"
 														class="form-control"
-														placeholder="Enter your password"
+														placeholder="Escribe tu contraseña"
 													/>
 												</div>
 											</div>
@@ -143,9 +143,9 @@ export default {
 														class="custom-control-label"
 														for="checkbox-signup"
 													>
-														I accept
+														Acepto
 														<a href="javascript: void(0);"
-															>Terms and Conditions</a
+															>los terminos y condiciones</a
 														>
 													</label>
 												</div>
@@ -153,7 +153,7 @@ export default {
 
 											<div class="form-group mb-0 text-center">
 												<button class="btn btn-primary btn-block" type="submit"
-													>Sign Up</button
+													>Registrarse</button
 												>
 											</div>
 										</form>
@@ -164,12 +164,12 @@ export default {
 											<div class="overlay"></div>
 											<div class="auth-user-testimonial">
 												<p class="font-size-24 font-weight-bold text-white mb-1"
-													>I simply love it!</p
+													>Simple!</p
 												>
 												<p class="lead"
-													>"It's a elegent templete. I love it very much!"</p
+													>"Texto"</p
 												>
-												<p>- Admin User</p>
+												<p>- Administrador</p>
 											</div>
 										</div>
 									</div>
@@ -182,7 +182,7 @@ export default {
 						<div class="row mt-3">
 							<div class="col-12 text-center">
 								<p class="text-muted">
-									Already have account?
+									Tienes una cuenta?
 									<router-link
 										tag="a"
 										to="/login"

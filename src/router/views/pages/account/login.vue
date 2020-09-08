@@ -26,8 +26,8 @@ export default {
 			return process.env.NODE_ENV === 'production'
 				? {}
 				: {
-						username: 'Use "admin" to log in with the mock API',
-						password: 'Use "password" to log in with the mock API',
+						username: 'Usa "admin" para logearte con the mock API',
+						password: 'Usa "password" para logearte con the mock API',
 				  }
 		},
 	},
@@ -81,10 +81,10 @@ export default {
 											</a>
 										</div>
 
-										<h6 class="h5 mb-0 mt-4">Welcome back!</h6>
+										<h6 class="h5 mb-0 mt-4">Bienvenido de vuelta!</h6>
 										<p class="text-muted mt-1 mb-4">
-											Enter your email address and password to access admin
-											panel.
+											Escribe tu email y contraseña para acceder al 
+											panel de administración.
 										</p>
 
 										<b-alert
@@ -118,11 +118,11 @@ export default {
 												</div>
 											</div>
 											<div class="form-group mt-4">
-												<label class="form-control-label">Password</label>
+												<label class="form-control-label">Contraseña</label>
 												<router-link
 													to="forget-password"
 													class="float-right text-muted text-unline-dashed ml-1"
-													>Forgot your password?</router-link
+													>Olvidaste tu contraseña?</router-link
 												>
 												<div class="input-group input-group-merge">
 													<div class="input-group-prepend">
@@ -154,7 +154,7 @@ export default {
 														class="custom-control-label"
 														for="checkbox-signin"
 													>
-														Remember me
+														Recordarme
 													</label>
 												</div>
 											</div>
@@ -168,18 +168,18 @@ export default {
 											</b-form-group>
 										</b-form>
 										<div class="py-3 text-center">
-											<span class="font-size-16 font-weight-bold">Or</span>
+											<span class="font-size-16 font-weight-bold">O</span>
 										</div>
 										<div class="row">
 											<div class="col-6">
 												<a href="javascript: void(0);" class="btn btn-white">
-													<i class="uil uil-google icon-google mr-2"></i>With
+													<i class="uil uil-google icon-google mr-2"></i>Con
 													Google
 												</a>
 											</div>
 											<div class="col-6 text-right">
 												<a href="javascript: void(0);" class="btn btn-white">
-													<i class="uil uil-facebook mr-2 icon-fb"></i>With
+													<i class="uil uil-facebook mr-2 icon-fb"></i>Con
 													Facebook
 												</a>
 											</div>
@@ -190,12 +190,12 @@ export default {
 											<div class="overlay"></div>
 											<div class="auth-user-testimonial">
 												<p class="font-size-24 font-weight-bold text-white mb-1"
-													>I simply love it!</p
+													>Simple</p
 												>
 												<p class="lead"
-													>"It's a elegent templete. I love it very much!"</p
+													>"Texto"</p
 												>
-												<p>- Admin User</p>
+												<p>- Administrador</p>
 											</div>
 										</div>
 									</div>
@@ -208,13 +208,13 @@ export default {
 						<div class="row mt-3">
 							<div class="col-12 text-center">
 								<p class="text-muted">
-									Don't have an account?
+									No tienes cuenta?
 									<router-link
 										tag="a"
 										to="/register"
 										class="text-primary font-weight-bold ml-1"
 									>
-										<b>Sign Up</b>
+										<b>Registrate</b>
 									</router-link>
 									<!-- <a
                     routerLink="/account/signup"

@@ -74,7 +74,7 @@ export default {
 								<input
 									type="text"
 									class="form-control"
-									placeholder="Search..."
+									placeholder="Buscar..."
 								/>
 								<feather type="search" class="align-middle"></feather>
 							</div>

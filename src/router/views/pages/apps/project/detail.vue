@@ -39,25 +39,25 @@ export default {
     <div class="row page-title">
       <div class="col-sm-8 col-xl-6">
         <h4 class="mb-1 mt-0">
-          Project: Landing page Design
+          Proyecto: Diseño de página de aterrizaje
           <div class="badge badge-success font-size-13 font-weight-normal"
             >Completed</div
           >
           <div
             class="badge badge-soft-primary font-size-13 font-weight-normal ml-1"
-            >Web Design</div
+            >Diseño Web</div
           >
         </h4>
       </div>
       <div class="col-sm-4 col-xl-6 text-sm-right">
         <div class="btn-group ml-2 d-none d-sm-inline-block">
           <button type="button" class="btn btn-soft-primary btn-sm">
-            <i class="uil uil-edit mr-1"></i>Edit
+            <i class="uil uil-edit mr-1"></i>Editar
           </button>
         </div>
         <div class="btn-group d-none d-sm-inline-block ml-1">
           <button type="button" class="btn btn-soft-danger btn-sm">
-            <i class="uil uil-trash-alt mr-1"></i>Delete
+            <i class="uil uil-trash-alt mr-1"></i>Eliminar
           </button>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default {
         <div class="card">
           <div class="card-body p-0">
             <h6 class="card-title border-bottom p-3 mb-0 header-title"
-              >Project Overview</h6
+              >Vista General del Proyecto</h6
             >
             <div class="row py-1">
               <!-- Widget -->
@@ -100,7 +100,7 @@ export default {
       <div class="col-xl-8">
         <div class="card">
           <div class="card-body">
-            <h6 class="mt-0 header-title">About Project</h6>
+            <h6 class="mt-0 header-title">Acerca del Proyecto</h6>
 
             <div class="text-muted mt-3">
               <p>
@@ -154,7 +154,7 @@ export default {
                 <div class="col-lg-3 col-md-6">
                   <div class="mt-4">
                     <p class="mb-2">
-                      <i class="uil-calender text-danger"></i> Start Date
+                      <i class="uil-calender text-danger"></i> Fecha inicio
                     </p>
                     <h5 class="font-size-16">15 July, 2019</h5>
                   </div>
@@ -162,7 +162,7 @@ export default {
                 <div class="col-lg-3 col-md-6">
                   <div class="mt-4">
                     <p class="mb-2">
-                      <i class="uil-calendar-slash text-danger"></i> Due Date
+                      <i class="uil-calendar-slash text-danger"></i> Fecha Final
                     </p>
                     <h5 class="font-size-16">15 July, 2019</h5>
                   </div>
@@ -170,7 +170,7 @@ export default {
                 <div class="col-lg-3 col-md-6">
                   <div class="mt-4">
                     <p class="mb-2">
-                      <i class="uil-dollar-alt text-danger"></i> Budget
+                      <i class="uil-dollar-alt text-danger"></i> Presupuesto
                     </p>
                     <h5 class="font-size-16">$1325</h5>
                   </div>
@@ -179,7 +179,7 @@ export default {
                 <div class="col-lg-3 col-md-6">
                   <div class="mt-4">
                     <p class="mb-2">
-                      <i class="uil-user text-danger"></i> Owner
+                      <i class="uil-user text-danger"></i> Dueño
                     </p>
                     <h5 class="font-size-16">Rick Perry</h5>
                   </div>
@@ -187,7 +187,7 @@ export default {
               </div>
 
               <div class="assign team mt-4">
-                <h6 class="font-weight-bold">Assign To</h6>
+                <h6 class="font-weight-bold">Asignado A</h6>
                 <a href="javascript: void(0);">
                   <img
                     src="@assets/images/users/avatar-2.jpg"
@@ -219,7 +219,7 @@ export default {
               </div>
 
               <div class="mt-4">
-                <h6 class="font-weight-bold">Attached Files</h6>
+                <h6 class="font-weight-bold">Archivos enlazados</h6>
 
                 <div class="row">
                   <div class="col-xl-4 col-md-6">
@@ -282,8 +282,8 @@ export default {
         <div class="card">
           <div class="card-body">
             <b-tabs pills class="navtab-bg">
-              <b-tab title="Discussion" active>
-                <h5 class="mb-4 pb-1 header-title">Comments (6)</h5>
+              <b-tab title="Discusión" active>
+                <h5 class="mb-4 pb-1 header-title">Comentarios (6)</h5>
                 <div class="media mb-4 font-size-14">
                   <div class="mr-3">
                     <a href="#">
@@ -400,12 +400,12 @@ export default {
                     <input
                       type="text"
                       class="form-control input-sm"
-                      placeholder="Some text value..."
+                      placeholder="Algún texto..."
                     />
                   </div>
                 </div>
               </b-tab>
-              <b-tab title="Files/Resources">
+              <b-tab title="Archivos/Recursos">
                 <h5 class="mb-3 header-title">Attached Files</h5>
                 <div>
                   <div class="p-2 border rounded mb-3">

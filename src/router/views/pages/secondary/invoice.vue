@@ -32,7 +32,7 @@ export default {
 			invoiceDetail: {
 				customer: 'Greeva Navadiya',
 				notes:
-					'All accounts are to be paid within 7 days from receipt of invoice. To be paid by cheque or credit card or direct payment online. If account is not paid within 7 days the credits details supplied as confirmation of work undertaken will be charged the agreed quoted fee noted above',
+					'Todas las cuentas deben pagarse dentro de los 7 días posteriores a la recepción de la factura. Para pagar con cheque o tarjeta de crédito o pago directo en línea. Si la cuenta no se paga dentro de los 7 días, los detalles de los créditos proporcionados como confirmación del trabajo realizado se cobrarán la tarifa acordada indicada anteriormente.',
 				invoice_date: 'Jul 17, 2019',
 				due_date: 'Jul 27, 2019',
 				invoice_id: '#sh1001',
@@ -100,19 +100,19 @@ export default {
 								</address>
 							</div>
 							<div class="float-sm-left">
-								<h4 class="m-0 d-print-none">Invoice</h4>
+								<h4 class="m-0 d-print-none">Factura</h4>
 								<dl class="row mb-2 mt-3">
-									<dt class="col-sm-3 font-weight-normal">Invoice Number :</dt>
+									<dt class="col-sm-3 font-weight-normal">Número Factura :</dt>
 									<dd class="col-sm-9 font-weight-normal">{{
 										invoiceDetail.invoice_id
 									}}</dd>
 
-									<dt class="col-sm-3 font-weight-normal">Invoice Date :</dt>
+									<dt class="col-sm-3 font-weight-normal">Fecha Factura :</dt>
 									<dd class="col-sm-9 font-weight-normal">{{
 										invoiceDetail.invoice_date
 									}}</dd>
 
-									<dt class="col-sm-3 font-weight-normal">Due Date :</dt>
+									<dt class="col-sm-3 font-weight-normal">Fecha Vencimiento :</dt>
 									<dd class="col-sm-9 font-weight-normal">{{
 										invoiceDetail.due_date
 									}}</dd>
@@ -122,7 +122,7 @@ export default {
 
 						<div class="row mt-4">
 							<div class="col-md-6">
-								<h6 class="font-weight-normal">Invoice For:</h6>
+								<h6 class="font-weight-normal">Facturada por:</h6>
 								<h6 class="font-size-16">{{ invoiceDetail.customer }}</h6>
 								<address>
 									{{ invoiceDetail.billing_address.line_1 }}
@@ -153,9 +153,9 @@ export default {
 										<thead>
 											<tr>
 												<th>#</th>
-												<th>Item</th>
-												<th style="width: 10%">Hours</th>
-												<th style="width: 10%">Hours Rate</th>
+												<th>Producto</th>
+												<th style="width: 10%">Horas</th>
+												<th style="width: 10%">Tarifa Horas</th>
 												<th style="width: 10%" class="text-right">Total</th>
 											</tr>
 										</thead>
@@ -206,12 +206,12 @@ export default {
 										}}</span>
 									</p>
 									<p>
-										<span class="font-weight-medium">Discount (10%):</span>
+										<span class="font-weight-medium">Descuento (10%):</span>
 										<span class="float-right"
 											>&nbsp;&nbsp;&nbsp; {{ invoiceDetail.discount }}</span
 										>
 									</p>
-									<h3>{{ invoiceDetail.total }} USD</h3>
+									<h3>{{ invoiceDetail.total }} RD</h3>
 								</div>
 								<div class="clearfix"></div>
 							</div>
@@ -222,10 +222,10 @@ export default {
 						<div class="mt-5 mb-1">
 							<div class="text-right d-print-none">
 								<a href="javascript:window.print()" class="btn btn-primary">
-									<i class="uil uil-print mr-1"></i> Print
+									<i class="uil uil-print mr-1"></i> Imprimir
 								</a>
 								<a href="javascript: void(0);" class="btn btn-info ml-1"
-									>Submit</a
+									>Enviar</a
 								>
 							</div>
 						</div>

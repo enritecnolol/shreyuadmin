@@ -22,19 +22,19 @@ export default {
 	<Layout>
 		<div class="row page-title align-items-center">
 			<div class="col-md-3 col-xl-6">
-				<h4 class="mb-1 mt-0">Projects</h4>
+				<h4 class="mb-1 mt-0">Proyectos</h4>
 			</div>
 			<div class="col-md-9 col-xl-6 text-md-right">
 				<div class="mt-4 mt-md-0">
 					<button type="button" class="btn btn-danger mr-4 mb-3 mb-sm-0">
-						<i class="uil-plus mr-1"></i> Create Project
+						<i class="uil-plus mr-1"></i> Crear Proyecto
 					</button>
 					<div class="btn-group mb-3 mb-sm-0">
-						<button type="button" class="btn btn-primary">All</button>
+						<button type="button" class="btn btn-primary">Todos</button>
 					</div>
 					<div class="btn-group ml-1">
-						<button type="button" class="btn btn-white">Ongoing</button>
-						<button type="button" class="btn btn-white">Finished</button>
+						<button type="button" class="btn btn-white">En proceso</button>
+						<button type="button" class="btn btn-white">Terminados</button>
 					</div>
 					<div class="btn-group ml-2 d-none d-sm-inline-block">
 						<button type="button" class="btn btn-primary btn-sm">
@@ -168,7 +168,7 @@ export default {
 							type="loader"
 							class="icon-dual icon-xs mr-2 align-middle"
 						></feather
-						>Load more
+						>Cargar más
 					</a>
 				</div>
 			</div>
