@@ -52,7 +52,6 @@ export default {
 <template>
     <Layout>
         <PageHeader :title="title" :items="items" />
-
         <div class="row">
             <div class="col-xl-8">
                 <div class="row">

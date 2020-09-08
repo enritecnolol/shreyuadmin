@@ -1,7 +1,7 @@
 <script>
 import appConfig from '@src/app.config'
 import Layout from '@layouts/main'
-
+import projectForm from "@components/form/projectForm";
 import { projectData } from './data-list'
 
 export default {
@@ -9,7 +9,7 @@ export default {
 		title: 'Projects List',
 		meta: [{ name: 'description', content: appConfig.description }],
 	},
-	components: { Layout },
+	components: { Layout, projectForm },
 	data() {
 		return {
 			projectData: projectData,
@@ -26,9 +26,21 @@ export default {
 			</div>
 			<div class="col-md-9 col-xl-6 text-md-right">
 				<div class="mt-4 mt-md-0">
-					<button type="button" class="btn btn-danger mr-4 mb-3 mb-sm-0">
-						<i class="uil-plus mr-1"></i> Crear Proyecto
-					</button>
+                    <b-button v-b-modal.modal-lg variant="danger" style="margin-right: 2rem">
+                        <i class="uil-plus mr-1"></i> Crear Proyecto
+                    </b-button>
+                    <b-modal
+                        id="modal-lg"
+                        size="lg"
+                        title="Formulario proyecto"
+                        title-class="font-18"
+                    >
+                        <project-form />
+                        <template v-slot:modal-footer>
+                            <b-button variant="light">Cerrar</b-button>
+                            <b-button variant="primary">Guardar cambios</b-button>
+                        </template>
+                    </b-modal>
 					<div class="btn-group mb-3 mb-sm-0">
 						<button type="button" class="btn btn-primary">Todos</button>
 					</div>
