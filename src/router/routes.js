@@ -144,10 +144,11 @@ const calendarAppsRoutes = [
         props: (route) => ({ user: store.state.auth.currentUser || {} }),
     }
 ];
+
 const clientsAppsRoutes = [
     {
         path: '/apps/clients',
-        name: 'Client',
+        name: 'Clientes',
         header: 'Apps',
         icon: 'user',
         component: () => lazyLoadView(import('@views/pages/apps/clients/clients-list')),
