@@ -309,6 +309,11 @@ const pagesRoutes = [
                 name: 'Pricing',
                 component: () => lazyLoadView(import('@views/pages/secondary/pricing')),
             },
+            {
+                path: 'calls',
+                name: 'Calls',
+                component: () => lazyLoadView(import('@views/pages/secondary/calls/calls')),
+            },
         ],
     },
 ]
