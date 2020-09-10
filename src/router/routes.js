@@ -145,6 +145,18 @@ const calendarAppsRoutes = [
     }
 ];
 
+const callAppsRoutes = [
+    {
+        path: '/apps/calls',
+        name: 'Llamadas',
+        header: 'Llamadas',
+        icon: 'user',
+        component: () => lazyLoadView(import('@views/pages/apps/calls/calls')),
+        meta: { authRequired: true },
+        props: (route) => ({ user: store.state.auth.currentUser || {} }),
+    }
+];
+
 const clientsAppsRoutes = [
     {
         path: '/apps/clients',
@@ -265,7 +277,8 @@ const appsRoutes = [
     ...emailAppsRoutes,
     ...projectAppsRoutes,
     ...taskAppsRoutes,
-    ...clientsAppsRoutes
+    ...clientsAppsRoutes,
+    ...callAppsRoutes
 ]
 
 // pages
@@ -308,11 +321,6 @@ const pagesRoutes = [
                 path: 'pricing',
                 name: 'Pricing',
                 component: () => lazyLoadView(import('@views/pages/secondary/pricing')),
-            },
-            {
-                path: 'calls',
-                name: 'Calls',
-                component: () => lazyLoadView(import('@views/pages/secondary/calls/calls')),
             },
         ],
     },
