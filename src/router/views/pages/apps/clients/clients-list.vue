@@ -1,17 +1,18 @@
 <script>
 import appConfig from '@src/app.config'
 import Layout from '@layouts/main'
-import PageHeader from '@components/page-header'
-
+// import PageHeader from '@components/page-header'
+import clientForm from "@components/form/clientForm";
 import { tableData } from './data-advanced'
 export default {
     page: {
         title: 'Clients',
         meta: [{ name: 'description', content: appConfig.description }],
     },
-    components: { Layout, PageHeader },
+    components: { Layout, clientForm },
     data() {
         return {
+            showmodal:false,
             tableData: tableData,
             title: 'Clientes',
             items: [
@@ -67,13 +68,41 @@ export default {
             this.totalRows = filteredItems.length
             this.currentPage = 1
         },
+        hideModal (e) {
+            this.showmodal = false
+        }
     },
 }
 </script>
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <!--        <PageHeader :title="title" :items="items" />-->
+        <div class="row page-title align-items-center">
+            <div class="col-md-3 col-xl-6">
+                <h4 class="mb-1 mt-0">Clientes</h4>
+            </div>
+            <div class="col-md-9 col-xl-6 text-md-right">
+                <div class="mt-4 mt-md-0">
+                    <b-button variant="primary" style="margin-right: 2rem" @click="showmodal = true" >
+                        <i class="uil-plus mr-1"></i> Crear cliente
+                    </b-button>
+                    <b-modal
+                        v-model="showmodal"
+                        size="lg"
+                        title="Formulario cliente"
+                        title-class="font-18"
+                        hide-footer
+                    >
+                        <client-form />
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-success">Guardar</button>
+                            <b-button class="ml-1" variant="light" @click="hideModal">Cerrar</b-button>
+                        </div>
+                    </b-modal>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
                 <div class="card">

@@ -314,158 +314,158 @@ const pagesRoutes = [
 ]
 
 // ui
-const uiRoutes = [
-    {
-        path: '/ui',
-        name: 'UI Elementos',
-        icon: 'package',
-        header: 'Componentes',
-        meta: { authRequired: true },
-        // create a container component
-        component: {
-            render(c) {
-                return c('router-view')
-            },
-        },
-        children: [
-            {
-                path: 'bootstrap',
-                name: 'Bootstrap UI',
-                component: () => lazyLoadView(import('@views/pages/ui/bootstrap/')),
-            },
-            {
-                path: 'icons',
-                name: 'Icons',
-                // create a container component
-                component: {
-                    render(c) {
-                        return c('router-view')
-                    },
-                },
-                children: [
-                    {
-                        path: 'feather',
-                        name: 'Feather',
-                        component: () =>
-                            lazyLoadView(import('@views/pages/ui/icons/feather')),
-                    },
-                    {
-                        path: 'unicons',
-                        name: 'Unicons',
-                        component: () =>
-                            lazyLoadView(import('@views/pages/ui/icons/unicons')),
-                    },
-                ],
-            },
-            {
-                path: 'widgets',
-                name: 'Widgets',
-                component: () => lazyLoadView(import('@views/pages/ui/widget/')),
-            },
-        ],
-    },
-]
+// const uiRoutes = [
+//     {
+//         path: '/ui',
+//         name: 'UI Elementos',
+//         icon: 'package',
+//         header: 'Componentes',
+//         meta: { authRequired: true },
+//         // create a container component
+//         component: {
+//             render(c) {
+//                 return c('router-view')
+//             },
+//         },
+//         children: [
+//             {
+//                 path: 'bootstrap',
+//                 name: 'Bootstrap UI',
+//                 component: () => lazyLoadView(import('@views/pages/ui/bootstrap/')),
+//             },
+//             {
+//                 path: 'icons',
+//                 name: 'Icons',
+//                 // create a container component
+//                 component: {
+//                     render(c) {
+//                         return c('router-view')
+//                     },
+//                 },
+//                 children: [
+//                     {
+//                         path: 'feather',
+//                         name: 'Feather',
+//                         component: () =>
+//                             lazyLoadView(import('@views/pages/ui/icons/feather')),
+//                     },
+//                     {
+//                         path: 'unicons',
+//                         name: 'Unicons',
+//                         component: () =>
+//                             lazyLoadView(import('@views/pages/ui/icons/unicons')),
+//                     },
+//                 ],
+//             },
+//             {
+//                 path: 'widgets',
+//                 name: 'Widgets',
+//                 component: () => lazyLoadView(import('@views/pages/ui/widget/')),
+//             },
+//         ],
+//     },
+// ]
 
 // forms
-const formsRoutes = [
-    {
-        path: '/forms',
-        name: 'Formularios',
-        icon: 'file-text',
-        meta: { authRequired: true },
-        // create a container component
-        component: {
-            render(c) {
-                return c('router-view')
-            },
-        },
-        children: [
-            {
-                path: 'basic',
-                name: 'Basic',
-                component: () => lazyLoadView(import('@views/pages/ui/forms/basic')),
-            },
-            {
-                path: 'advanced',
-                name: 'Advanced',
-                component: () => lazyLoadView(import('@views/pages/ui/forms/advanced')),
-            },
-            {
-                path: 'validation',
-                name: 'Validation',
-                component: () =>
-                    lazyLoadView(import('@views/pages/ui/forms/validation')),
-            },
-            {
-                path: 'wizard',
-                name: 'Wizard',
-                component: () => lazyLoadView(import('@views/pages/ui/forms/wizard/')),
-            },
-            {
-                path: 'editor',
-                name: 'Editor',
-                component: () => lazyLoadView(import('@views/pages/ui/forms/editor')),
-            },
-            {
-                path: 'uploads',
-                name: 'File Uploads',
-                component: () => lazyLoadView(import('@views/pages/ui/forms/uploads')),
-            },
-        ],
-    },
-]
+// const formsRoutes = [
+//     {
+//         path: '/forms',
+//         name: 'Formularios',
+//         icon: 'file-text',
+//         meta: { authRequired: true },
+//         // create a container component
+//         component: {
+//             render(c) {
+//                 return c('router-view')
+//             },
+//         },
+//         children: [
+//             {
+//                 path: 'basic',
+//                 name: 'Basic',
+//                 component: () => lazyLoadView(import('@views/pages/ui/forms/basic')),
+//             },
+//             {
+//                 path: 'advanced',
+//                 name: 'Advanced',
+//                 component: () => lazyLoadView(import('@views/pages/ui/forms/advanced')),
+//             },
+//             {
+//                 path: 'validation',
+//                 name: 'Validation',
+//                 component: () =>
+//                     lazyLoadView(import('@views/pages/ui/forms/validation')),
+//             },
+//             {
+//                 path: 'wizard',
+//                 name: 'Wizard',
+//                 component: () => lazyLoadView(import('@views/pages/ui/forms/wizard/')),
+//             },
+//             {
+//                 path: 'editor',
+//                 name: 'Editor',
+//                 component: () => lazyLoadView(import('@views/pages/ui/forms/editor')),
+//             },
+//             {
+//                 path: 'uploads',
+//                 name: 'File Uploads',
+//                 component: () => lazyLoadView(import('@views/pages/ui/forms/uploads')),
+//             },
+//         ],
+//     },
+// ]
 
 // tables
-const tablesRoutes = [
-    {
-        path: '/tables',
-        name: 'Tablas',
-        icon: 'grid',
-        meta: { authRequired: true },
-        // create a container component
-        component: {
-            render(c) {
-                return c('router-view')
-            },
-        },
-        children: [
-            {
-                path: 'basic',
-                name: 'Basic Tables',
-                component: () =>
-                    lazyLoadView(import('@views/pages/ui/tables/basic-table')),
-            },
-            {
-                path: 'advanced',
-                name: 'Advanced Tables',
-                component: () =>
-                    lazyLoadView(import('@views/pages/ui/tables/advanced-table')),
-            },
-        ],
-    },
-]
+// const tablesRoutes = [
+//     {
+//         path: '/tables',
+//         name: 'Tablas',
+//         icon: 'grid',
+//         meta: { authRequired: true },
+//         // create a container component
+//         component: {
+//             render(c) {
+//                 return c('router-view')
+//             },
+//         },
+//         children: [
+//             {
+//                 path: 'basic',
+//                 name: 'Basic Tables',
+//                 component: () =>
+//                     lazyLoadView(import('@views/pages/ui/tables/basic-table')),
+//             },
+//             {
+//                 path: 'advanced',
+//                 name: 'Advanced Tables',
+//                 component: () =>
+//                     lazyLoadView(import('@views/pages/ui/tables/advanced-table')),
+//             },
+//         ],
+//     },
+// ]
 
 // charts
-const chartsRoutes = [
-    {
-        path: '/charts',
-        name: 'Charts',
-        icon: 'pie-chart',
-        component: () => lazyLoadView(import('@views/pages/ui/chart/')),
-        meta: { authRequired: true },
-        props: (route) => ({ user: store.state.auth.currentUser || {} }),
-    },
-]
+// const chartsRoutes = [
+//     {
+//         path: '/charts',
+//         name: 'Charts',
+//         icon: 'pie-chart',
+//         component: () => lazyLoadView(import('@views/pages/ui/chart/')),
+//         meta: { authRequired: true },
+//         props: (route) => ({ user: store.state.auth.currentUser || {} }),
+//     },
+// ]
 
 
 const authProtectedRoutes = [
     ...dashboardRoutes,
     ...appsRoutes,
-    ...pagesRoutes,
-    ...uiRoutes,
-    ...formsRoutes,
-    ...chartsRoutes,
-    ...tablesRoutes
+    ...pagesRoutes
+    // ...uiRoutes,
+    // ...formsRoutes,
+    // ...chartsRoutes,
+    // ...tablesRoutes
 ]
 const allRoutes = [...authRoutes, ...authProtectedRoutes, ...errorPagesRoutes]
 
