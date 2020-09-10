@@ -192,14 +192,14 @@ const emailAppsRoutes = [
             },
             {
                 path: 'read',
-                name: 'Read Email',
+                name: 'Leer el correo electrónico',
                 meta: { authRequired: true },
                 component: () =>
                     lazyLoadView(import('@views/pages/apps/email/reademail')),
             },
             {
                 path: 'compose',
-                name: 'Compose Email',
+                name: 'Escribir correo',
                 meta: { authRequired: true },
                 component: () =>
                     lazyLoadView(import('@views/pages/apps/email/emailcompose')),
@@ -224,14 +224,14 @@ const projectAppsRoutes = [
         children: [
             {
                 path: 'list',
-                name: 'List',
+                name: 'Lista',
                 meta: { authRequired: true },
                 component: () =>
                     lazyLoadView(import('@views/pages/apps/project/list')),
             },
             {
                 path: 'detail',
-                name: 'Detail',
+                name: 'Detalle',
                 meta: { authRequired: true },
                 component: () =>
                     lazyLoadView(import('@views/pages/apps/project/detail')),
@@ -256,14 +256,14 @@ const taskAppsRoutes = [
         children: [
             {
                 path: 'list',
-                name: 'Task List',
+                name: 'Lista tarea',
                 meta: { authRequired: true },
                 component: () =>
                     lazyLoadView(import('@views/pages/apps/tasks/task-list')),
             },
             {
                 path: 'task-board',
-                name: 'Kanban Board',
+                name: 'Tablero de tarea',
                 meta: { authRequired: true },
                 component: () =>
                     lazyLoadView(import('@views/pages/apps/tasks/task-board')),
@@ -298,30 +298,30 @@ const pagesRoutes = [
         children: [
             {
                 path: 'starter',
-                name: 'Starter',
+                name: 'Inicio',
                 component: () => lazyLoadView(import('@views/pages/secondary/starter')),
             },
             {
                 path: 'invoice',
-                name: 'Invoice',
+                name: 'Factura',
                 component: () => lazyLoadView(import('@views/pages/secondary/invoice')),
             },
             {
                 path: 'profile',
-                name: 'Profile',
+                name: 'Perfiles',
                 component: () => lazyLoadView(import('@views/pages/secondary/profile/')),
             },
             {
                 path: 'activity',
-                name: 'Activity',
+                name: 'Actividades',
                 component: () =>
                     lazyLoadView(import('@views/pages/secondary/activity')),
             },
-            {
-                path: 'pricing',
-                name: 'Pricing',
-                component: () => lazyLoadView(import('@views/pages/secondary/pricing')),
-            },
+            // {
+            //     path: 'pricing',
+            //     name: 'Pricing',
+            //     component: () => lazyLoadView(import('@views/pages/secondary/pricing')),
+            // },
         ],
     },
 ]
