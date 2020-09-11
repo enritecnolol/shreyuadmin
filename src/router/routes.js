@@ -157,6 +157,18 @@ const callAppsRoutes = [
     }
 ];
 
+const timesheetAppsRoutes = [
+    {
+        path: '/apps/timesheet',
+        name: 'Timesheet',
+        header: 'Hoja de tiempo',
+        icon: 'user',
+        component: () => lazyLoadView(import('@views/pages/apps/timesheet/timesheet')),
+        meta: { authRequired: true },
+        props: (route) => ({ user: store.state.auth.currentUser || {} }),
+    }
+];
+
 const clientsAppsRoutes = [
     {
         path: '/apps/clients',
@@ -278,7 +290,8 @@ const appsRoutes = [
     ...projectAppsRoutes,
     ...taskAppsRoutes,
     ...clientsAppsRoutes,
-    ...callAppsRoutes
+    ...callAppsRoutes,
+    ...timesheetAppsRoutes
 ]
 
 // pages
