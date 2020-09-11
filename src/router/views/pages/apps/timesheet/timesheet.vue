@@ -2,7 +2,7 @@
 import appConfig from '@src/app.config'
 import Layout from '@layouts/main'
 import PageHeader from '@components/page-header'
-import timesheetForm from "@components/form/timesheetForm";
+// import timesheetForm from "@components/form/timesheetForm";
 
 import { tableData } from './timesheet-advanced'
 
@@ -11,10 +11,13 @@ export default {
     title: 'Timesheet',
     meta: [{ name: 'description', content: appConfig.description }],
   },
-  components: { Layout, PageHeader, timesheetForm },
+  components: { Layout, PageHeader, 
+  // timesheetForm
+   },
   data () {
     return {
-publicPath: process.env.BASE_URL,
+      startdate: null,
+      enddate: null,
       showmodal: false,
       tableData: tableData,
       title: 'Hoja de Tiempo',
@@ -41,14 +44,12 @@ publicPath: process.env.BASE_URL,
       sortBy: 'age',
       sortDesc: false,
       fields: [
-        { key: 'id', sortable: true },
-        { key: 'image', sortable: false },
+        // { key: 'id', sortable: true },
+        { key: 'image', label: 'Imagen', sortable: false },
         { key: 'name', label: 'Nombre', sortable: true },
-        { key: 'person', label: 'Atendido por', sortable: true },
-        { key: 'motive', label: 'Motivo', sortable: true },
-        { key: 'type', label: 'Tipo', sortable: true },
-        { key: 'duration', label: 'Duración', sortable: true },
-        { key: 'reg_date', label: 'Fecha Reg', sortable: true },
+        { key: 'rol', label: 'Rol', sortable: true },
+        { key: 'start_hour', label: 'Hora inicio', sortable: true },
+        { key: 'end_hour', label: 'Hora final', sortable: true },
         { key: 'date', label: 'Fecha', sortable: true },
       ],
     }
@@ -73,8 +74,8 @@ publicPath: process.env.BASE_URL,
       // Trigger pagination to update the number of buttons/pages due to filtering
       this.totalRows = filteredItems.length
       this.currentPage = 1
-	},
-	hideModal (e) {
+    },
+    hideModal (e) {
       this.showmodal = false
     },
   },
@@ -90,7 +91,7 @@ publicPath: process.env.BASE_URL,
             <h4 class="header-title mt-0 mb-1">Hoja de Tiempo</h4>
             <p class="text-muted font-13 mb-4"></p>
             <div class="row mb-md-2">
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6 col-lg-3">
                 <div id="tickets-table_length" class="dataTables_length">
                   <label class="d-inline-flex align-items-center">
                     Show&nbsp;
@@ -99,18 +100,22 @@ publicPath: process.env.BASE_URL,
                 </div>
               </div>
               <!-- Search -->
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6 col-lg-3">
                 <div id="tickets-table_filter" class="dataTables_filter text-md-right">
                   <label class="d-inline-flex align-items-center">
-                    Search:
+                    Buscar:
                     <b-form-input
                       v-model="filter"
                       type="search"
-                      placeholder="Search..."
+                      placeholder="Buscar..."
                       class="form-control form-control-sm mx-2"
                     ></b-form-input>
                   </label>
-                  <button id="btn-new-event" class="btn btn-primary btn-sm" @click="showmodal = true">
+                  <!-- <button
+                    id="btn-new-event"
+                    class="btn btn-primary btn-sm"
+                    @click="showmodal = true"
+                  >
                     <i class="uil-plus-circle"></i> Registrar Llamada
                   </button>
                   <b-modal
@@ -126,10 +131,32 @@ publicPath: process.env.BASE_URL,
                       <button type="submit" class="btn btn-success">Guardar</button>
                       <b-button class="ml-1" variant="light" @click="hideModal">Cerrar</b-button>
                     </div>
-                  </b-modal>
+                  </b-modal>-->
                 </div>
               </div>
               <!-- End search -->
+               <div class="col-sm-12 col-md-6 col-lg-3">
+                <label class="d-inline-flex align-items-center">
+                  Fecha inicio:
+                  <flat-pickr
+                    v-model="startdate"
+                    class="form-control form-control-sm mx-2"
+                    placeholder
+                    name="date"
+                  ></flat-pickr>
+                </label>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <label class="d-inline-flex align-items-center">
+                  Fecha final:
+                  <flat-pickr
+                    v-model="enddate"
+                    class="form-control form-control-sm mx-2"
+                    placeholder
+                    name="date"
+                  ></flat-pickr>
+                </label>
+              </div>
             </div>
             <!-- Table -->
             <div class="table-responsive mb-0">
@@ -145,11 +172,9 @@ publicPath: process.env.BASE_URL,
                 :filter-included-fields="filterOn"
                 @filtered="onFiltered"
               >
-               <template v-slot:cell(image)="data">
-                {{ data.value }}
-                {{publicPath}}
-                  <b-img :src="'../assets/images/' + data.value" fluid alt="Fluid image"></b-img>
-              </template>
+                <template v-slot:cell(image)="data">
+                  <b-img :src="data.value" fluid alt="Fluid image" width="80"></b-img>
+                </template>
               </b-table>
             </div>
             <div class="row">
