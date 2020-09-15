@@ -3,6 +3,7 @@ import draggable from 'vuedraggable'
 import appConfig from '@src/app.config'
 import Layout from '@layouts/main'
 import PageHeader from '@components/page-header'
+import tasksForm from "@components/form/tasksForm";
 
 import Task from './board-task'
 import { tasks } from './data-taskboard'
@@ -12,9 +13,10 @@ export default {
 		title: 'Project Tasks Board',
 		meta: [{ name: 'description', content: appConfig.description }],
 	},
-	components: { draggable, Layout, PageHeader, Task },
+	components: { draggable, Layout, PageHeader, Task, tasksForm },
 	data() {
 		return {
+            showmodal:false,
 			todoTasks: [...tasks[0].items],
 			inProgressTasks: [...tasks[1].items],
 			reviewTasks: [...tasks[2].items],
@@ -107,9 +109,23 @@ export default {
 								</b-dropdown>
 							</div>
 							<div class="col text-right">
-								<button id="btn-new-event" class="btn btn-primary">
-									<i class="uil-plus mr-1"></i>Add New
+								<button id="btn-new-event" class="btn btn-primary" @click="showmodal = true">
+									<i class="uil-plus mr-1"></i>Nueva tarea
 								</button>
+                                <b-modal
+                                    v-model="showmodal"
+                                    size="lg"
+                                    title="Formulario tarea"
+                                    title-class="font-18"
+                                    hide-footer
+                                >
+                                    <tasks-form />
+
+                                    <div class="text-right">
+                                        <button type="submit" class="btn btn-success">Guardar</button>
+                                        <b-button class="ml-1" variant="light" @click="hideModal">Cerrar</b-button>
+                                    </div>
+                                </b-modal>
 							</div>
 						</div>
 					</div>

@@ -69,7 +69,7 @@ export default {
                 <div class="row">
                   <div class="col-sm-3">
                     <b-button variant="primary" @click="showmodal = true" >
-                      <i class="uil uil-plus mr-1"></i>Add New
+                      <i class="uil uil-plus mr-1"></i> Nueva tarea
                     </b-button>
                     <b-modal
                       v-model="showmodal"
