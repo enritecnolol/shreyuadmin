@@ -6,6 +6,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -15,6 +16,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -24,6 +26,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -33,6 +36,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -42,6 +46,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -51,6 +56,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -60,6 +66,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -69,6 +76,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -78,6 +86,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -87,6 +96,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   },
   {
@@ -96,6 +106,7 @@ const tableData = [
     rol: 'Rol Empleado',
     start_hour: '00:00:00',
     end_hour: '00:00:00',
+    total_hour: '0 horas y 0 minutos',
     date: '2018/07/29',
   }
 ]

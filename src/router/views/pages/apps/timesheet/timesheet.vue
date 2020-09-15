@@ -11,13 +11,16 @@ export default {
     title: 'Timesheet',
     meta: [{ name: 'description', content: appConfig.description }],
   },
-  components: { Layout, PageHeader, 
-  // timesheetForm
-   },
+  components: {
+    Layout, PageHeader,
+    // timesheetForm
+  },
   data () {
     return {
-      startdate: null,
-      enddate: null,
+      dateConfig: {
+        mode: 'range',
+      },
+      selectedDate: [new Date().setDate(new Date().getDate() - 7), new Date()],
       showmodal: false,
       tableData: tableData,
       title: 'Hoja de Tiempo',
@@ -50,6 +53,7 @@ export default {
         { key: 'rol', label: 'Rol', sortable: true },
         { key: 'start_hour', label: 'Hora inicio', sortable: true },
         { key: 'end_hour', label: 'Hora final', sortable: true },
+        { key: 'total_hour', label: 'Horas Totales', sortable: true },
         { key: 'date', label: 'Fecha', sortable: true },
       ],
     }
@@ -91,7 +95,7 @@ export default {
             <h4 class="header-title mt-0 mb-1">Hoja de Tiempo</h4>
             <p class="text-muted font-13 mb-4"></p>
             <div class="row mb-md-2">
-              <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div id="tickets-table_length" class="dataTables_length">
                   <label class="d-inline-flex align-items-center">
                     Show&nbsp;
@@ -99,8 +103,18 @@ export default {
                   </label>
                 </div>
               </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <label class="d-inline-flex align-items-center">
+                  <flat-pickr
+                    v-model="selectedDate"
+                    class="form-control"
+                    :config="dateConfig"
+                    name="date"
+                  ></flat-pickr>
+                </label>
+              </div>
               <!-- Search -->
-              <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div id="tickets-table_filter" class="dataTables_filter text-md-right">
                   <label class="d-inline-flex align-items-center">
                     Buscar:
@@ -111,52 +125,10 @@ export default {
                       class="form-control form-control-sm mx-2"
                     ></b-form-input>
                   </label>
-                  <!-- <button
-                    id="btn-new-event"
-                    class="btn btn-primary btn-sm"
-                    @click="showmodal = true"
-                  >
-                    <i class="uil-plus-circle"></i> Registrar Llamada
-                  </button>
-                  <b-modal
-                    v-model="showmodal"
-                    size="lg"
-                    title="Formulario Llamada"
-                    title-class="font-18"
-                    hide-footer
-                  >
-                    <timesheet-form />
-
-                    <div class="text-right">
-                      <button type="submit" class="btn btn-success">Guardar</button>
-                      <b-button class="ml-1" variant="light" @click="hideModal">Cerrar</b-button>
-                    </div>
-                  </b-modal>-->
                 </div>
               </div>
               <!-- End search -->
-               <div class="col-sm-12 col-md-6 col-lg-3">
-                <label class="d-inline-flex align-items-center">
-                  Fecha inicio:
-                  <flat-pickr
-                    v-model="startdate"
-                    class="form-control form-control-sm mx-2"
-                    placeholder
-                    name="date"
-                  ></flat-pickr>
-                </label>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3">
-                <label class="d-inline-flex align-items-center">
-                  Fecha final:
-                  <flat-pickr
-                    v-model="enddate"
-                    class="form-control form-control-sm mx-2"
-                    placeholder
-                    name="date"
-                  ></flat-pickr>
-                </label>
-              </div>
+              
             </div>
             <!-- Table -->
             <div class="table-responsive mb-0">

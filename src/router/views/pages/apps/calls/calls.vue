@@ -14,7 +14,10 @@ export default {
   components: { Layout, PageHeader, callsForm },
   data () {
     return {
-
+      dateConfig: {
+        mode: 'range',
+      },
+      selectedDate: [new Date().setDate(new Date().getDate() - 7), new Date()],
       showmodal: false,
       tableData: tableData,
       title: 'Llamadas',
@@ -89,7 +92,7 @@ export default {
             <h4 class="header-title mt-0 mb-1">Lista de Llamadas</h4>
             <p class="text-muted font-13 mb-4"></p>
             <div class="row mb-md-2">
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div id="tickets-table_length" class="dataTables_length">
                   <label class="d-inline-flex align-items-center">
                     Show&nbsp;
@@ -97,8 +100,18 @@ export default {
                   </label>
                 </div>
               </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <label class="d-inline-flex align-items-center">
+                  <flat-pickr
+                    v-model="selectedDate"
+                    class="form-control"
+                    :config="dateConfig"
+                    name="date"
+                  ></flat-pickr>
+                </label>
+              </div>
               <!-- Search -->
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div id="tickets-table_filter" class="dataTables_filter text-md-right">
                   <label class="d-inline-flex align-items-center">
                     Buscar:
@@ -109,7 +122,7 @@ export default {
                       class="form-control form-control-sm mx-2"
                     ></b-form-input>
                   </label>
-                  <button id="btn-new-event" class="btn btn-primary btn-sm" @click="showmodal = true">
+                  <button id="btn-new-event" class="btn btn-primary btn-sm mx-md-2" @click="showmodal = true">
                     <i class="uil-plus-circle"></i> Registrar Llamada
                   </button>
                   <b-modal
