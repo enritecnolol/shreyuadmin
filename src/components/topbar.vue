@@ -41,8 +41,8 @@ export default {
 			<!-- LOGO -->
 			<a href="/" class="navbar-brand mr-0 mr-md-2 logo">
 				<span class="logo-lg">
-					<img src="@assets/images/logo.png" alt height="24" />
-					<span class="d-inline h5 ml-2 text-logo">Shreyu</span>
+					<img src="@assets/images/logoayala.png" alt height="50" />
+					<!-- <span class="d-inline h5 ml-2 text-logo">Cruz Ayala</span> -->
 				</span>
 				<span class="logo-sm">
 					<img src="@assets/images/logo.png" alt height="24" />
