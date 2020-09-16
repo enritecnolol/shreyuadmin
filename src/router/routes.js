@@ -181,6 +181,18 @@ const clientsAppsRoutes = [
     }
 ];
 
+const productsAppsRoutes = [
+    {
+        path: '/apps/products',
+        name: 'Productos',
+        header: 'Productos',
+        icon: 'truck',
+        component: () => lazyLoadView(import('@views/pages/apps/products/product-list')),
+        meta: { authRequired: true },
+        props: (route) => ({ user: store.state.auth.currentUser || {} }),
+    }
+];
+
 const emailAppsRoutes = [
     {
         path: '/apps/email',
@@ -291,7 +303,8 @@ const appsRoutes = [
     ...taskAppsRoutes,
     ...clientsAppsRoutes,
     ...callAppsRoutes,
-    ...timesheetAppsRoutes
+    ...timesheetAppsRoutes,
+    ...productsAppsRoutes
 ]
 
 // pages
