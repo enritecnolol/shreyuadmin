@@ -48,6 +48,7 @@ export default {
                 { key: 'age', sortable: true, label: 'Edad' },
                 { key: 'date', sortable: true, label: 'Fecha' },
                 { key: 'salary', sortable: true, label: 'Salario' },
+                { key: 'action', sortable: true, label: 'Acciones' }
             ],
         }
     },
@@ -163,7 +164,24 @@ export default {
                                 :filter="filter"
                                 :filter-included-fields="filterOn"
                                 @filtered="onFiltered"
-                            ></b-table>
+                            >
+                            <template v-slot:cell(action)>
+                                <button
+                                    id="btn-new-event"
+                                    class="btn btn-warning btn-sm mx-1 mx-md-2"
+                                    @click="showmodal = true"
+                                >
+                                    <i class="uil-edit"></i>
+                                </button>
+                                <button
+                                    id="btn-new-event"
+                                    class="btn btn-danger btn-sm mx-1 mx-md-2"
+                                    @click="showmodal = true"
+                                >
+                                    <i class="uil-cancel"></i>
+                                </button>
+                            </template>
+                            </b-table>
                         </div>
                         <div class="row">
                             <div class="col">
