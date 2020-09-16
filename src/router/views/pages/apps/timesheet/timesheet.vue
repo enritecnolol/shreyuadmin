@@ -55,6 +55,7 @@ export default {
         { key: 'end_hour', label: 'Hora final', sortable: true },
         { key: 'total_hour', label: 'Horas Totales', sortable: true },
         { key: 'date', label: 'Fecha', sortable: true },
+        { key: 'action', sortable: true, label: 'Acciones' }
       ],
     }
   },
@@ -128,7 +129,6 @@ export default {
                 </div>
               </div>
               <!-- End search -->
-              
             </div>
             <!-- Table -->
             <div class="table-responsive mb-0">
@@ -144,6 +144,22 @@ export default {
                 :filter-included-fields="filterOn"
                 @filtered="onFiltered"
               >
+                <template v-slot:cell(action)>
+                  <button
+                    id="btn-new-event"
+                    class="btn btn-warning btn-sm mx-1 mx-md-2"
+                    @click="showmodal = true"
+                  >
+                    <i class="uil-edit"></i>
+                  </button>
+                  <button
+                    id="btn-new-event"
+                    class="btn btn-danger btn-sm mx-1 mx-md-2"
+                    @click="showmodal = true"
+                  >
+                    <i class="uil-cancel"></i>
+                  </button>
+                </template>
                 <template v-slot:cell(image)="data">
                   <b-img :src="data.value" fluid alt="Fluid image" width="80"></b-img>
                 </template>

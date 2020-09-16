@@ -1,7 +1,7 @@
 <script>
 import appConfig from '@src/app.config'
 import Layout from '@layouts/main'
-import {tableData} from "@views/pages/apps/products/data-advanced";
+import {tableData} from "@views/pages/apps/products/data-product";
 export default {
     page: {
         title: 'Products',
@@ -40,11 +40,14 @@ export default {
             sortBy: 'age',
             sortDesc: false,
             fields: [
+                { key: 'image', sortable: true, label: 'Imagen'},
                 { key: 'name', sortable: true, label: 'Nombre'},
-                { key: 'code', sortable: true, label: 'Codigo' },
+                { key: 'code', sortable: true, label: 'Código' },
                 { key: 'purchase_price', sortable: true, label: 'Precio compra'},
                 { key: 'sale_price', sortable: true, label: 'Precio venta' },
-                { key: 'unit_measurement', sortable: true, label: 'Unidad de medida' }
+                { key: 'quantity', sortable: true, label: 'Cantidad' },
+                { key: 'unit_measurement', sortable: true, label: 'Unidad de medida' },
+                { key: 'action', sortable: true, label: 'Acciones' }
             ],
         }
     },
@@ -156,7 +159,21 @@ export default {
                                 :filter="filter"
                                 :filter-included-fields="filterOn"
                                 @filtered="onFiltered"
-                            ></b-table>
+                            >
+                            <template v-slot:cell(image)="data">
+                                <b-img :src="data.value" fluid alt="Fluid image" width="80"></b-img>
+                            </template>
+                            <template v-slot:cell(action)>
+                                <div>
+                                    <button id="btn-new-event" class="btn btn-warning btn-sm mx-1 mx-md-2" @click="showmodal = true">
+                                        <i class="uil-edit"></i>
+                                    </button>
+                                    <button id="btn-new-event" class="btn btn-danger btn-sm mx-1 mx-md-2" @click="showmodal = true">
+                                        <i class="uil-cancel"></i>
+                                    </button>
+                                </div>
+                            </template>
+                            </b-table>
                         </div>
                         <div class="row">
                             <div class="col">

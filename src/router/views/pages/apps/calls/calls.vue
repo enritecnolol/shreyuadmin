@@ -52,6 +52,7 @@ export default {
         { key: 'duration', label: 'Duración', sortable: true },
         { key: 'reg_date', label: 'Fecha Reg', sortable: true },
         { key: 'date', label: 'Fecha', sortable: true },
+        { key: 'action', label: 'Acciones', sortable: true }
       ],
     }
   },
@@ -156,7 +157,26 @@ export default {
                 :filter="filter"
                 :filter-included-fields="filterOn"
                 @filtered="onFiltered"
-              ></b-table>
+              >
+              <template v-slot:cell(action)>
+                  <div class="d-flex">
+                    <button
+                    id="btn-new-event"
+                    class="btn btn-warning btn-sm mx-1 mx-md-2"
+                    @click="showmodal = true"
+                  >
+                    <i class="uil-edit"></i>
+                  </button>
+                  <button
+                    id="btn-new-event"
+                    class="btn btn-danger btn-sm mx-1 mx-md-2"
+                    @click="showmodal = true"
+                  >
+                    <i class="uil-cancel"></i>
+                  </button>
+                  </div>
+                </template>
+              </b-table>
             </div>
             <div class="row">
               <div class="col">
