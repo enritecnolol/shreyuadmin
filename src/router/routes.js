@@ -186,8 +186,20 @@ const productsAppsRoutes = [
         path: '/apps/products',
         name: 'Productos',
         header: 'Productos',
-        icon: 'truck',
+        icon: 'box',
         component: () => lazyLoadView(import('@views/pages/apps/products/product-list')),
+        meta: { authRequired: true },
+        props: (route) => ({ user: store.state.auth.currentUser || {} }),
+    }
+];
+
+const vendorsAppsRoutes = [
+    {
+        path: '/apps/vendors',
+        name: 'proveedores',
+        header: 'proveedores',
+        icon: 'truck',
+        component: () => lazyLoadView(import('@views/pages/apps/vendors/vendors-list')),
         meta: { authRequired: true },
         props: (route) => ({ user: store.state.auth.currentUser || {} }),
     }
@@ -304,7 +316,8 @@ const appsRoutes = [
     ...clientsAppsRoutes,
     ...callAppsRoutes,
     ...timesheetAppsRoutes,
-    ...productsAppsRoutes
+    ...productsAppsRoutes,
+    ...vendorsAppsRoutes
 ]
 
 // pages
