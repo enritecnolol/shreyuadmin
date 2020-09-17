@@ -8,8 +8,8 @@ export default {
     title: 'Orden',
     meta: [{ name: 'description', content: appConfig.description }],
   },
-//   productForm
-  components: { Layout},
+  //   productForm
+  components: { Layout },
   data () {
     return {
       dateConfig: {
@@ -35,8 +35,8 @@ export default {
       ],
       totalRows: 1,
       currentPage: 1,
-      perPage: 3,
-      pageOptions: [3, 10, 25, 50, 100],
+      perPage: 2,
+      pageOptions: [2, 10, 25, 50, 100],
       filter: null,
       filterOn: [],
       sortBy: 'age',
@@ -83,20 +83,19 @@ export default {
 <template>
   <Layout>
     <!--        <PageHeader :title="title" :items="items" />-->
-    <div class="row page-title align-items-center">
-      <div class="col-md-3 col-xl-6">
+    <div class="row page-title align-items-center py-2">
+      <!-- <div class="col-md-3 col-xl-6">
         <h4 class="mb-1 mt-0">Ordenes de compra</h4>
       </div>
       <div class="col-md-9 col-xl-6 text-md-right">
         <div class="mt-4 mt-md-0"></div>
-      </div>
+      </div> -->
     </div>
     <div class="row">
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            <h4 class="header-title mt-0 mb-1">Orden</h4>
-            <p class="text-muted font-13 mb-4"></p>
+            <h4 class="header-title mt-0 mb-2">Orden de compra</h4>
             <!-- Form -->
             <div>
               <b-form class="form-horizontal">
@@ -105,69 +104,7 @@ export default {
                     <b-form-group
                       label-cols-sm="12"
                       label-cols-lg="12"
-                      label="Nombre Cliente"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-input id="input-horizontal" value></b-form-input>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Atendido por"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-input id="input-horizontal" value></b-form-input>
-                    </b-form-group>
-                  </div>
-
-                  <div class="col-lg-12">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Dirección"
-                      label-for="input-horizontal"
-                    >
-                      <textarea v-model="textarea" class="form-control" :maxlength="225" rows="3"></textarea>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Email"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-input id="input-horizontal" value></b-form-input>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="RNC"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-input id="input-horizontal" value></b-form-input>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group row">
-                      <label class="col-lg-12 col-form-label">Condición</label>
-                      <div class="col-lg-12">
-                        <select class="form-control custom-select">
-                          <option>Saliente</option>
-                          <option>Entrante</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Fecha"
+                      label="Fecha Factura"
                       label-for="input-horizontal"
                     >
                       <flat-pickr
@@ -182,7 +119,7 @@ export default {
                     <b-form-group
                       label-cols-sm="12"
                       label-cols-lg="12"
-                      label="Vencimiento"
+                      label="Fecha Vencimiento"
                       label-for="input-horizontal"
                     >
                       <flat-pickr
@@ -194,29 +131,15 @@ export default {
                     </b-form-group>
                   </div>
                   <div class="col-lg-6">
-                    <div class="form-group row">
-                      <label class="col-lg-12 col-form-label">Tipo NCF</label>
-                      <div class="col-lg-12">
-                        <select class="form-control custom-select">
-                          <option>Saliente</option>
-                          <option>Entrante</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
                     <b-form-group
                       label-cols-sm="12"
                       label-cols-lg="12"
-                      label="NCF"
+                      label="Cliente"
                       label-for="input-horizontal"
                     >
                       <b-form-input id="input-horizontal" value></b-form-input>
                     </b-form-group>
                   </div>
-                  <!-- <div class="col-lg-12">
-                    <hr />
-                  </div>-->
                   <div class="col-lg-12">
                     <tasks-form />
                   </div>
@@ -225,7 +148,7 @@ export default {
             </div>
             <!-- End form -->
             <div class="row mb-md-2">
-              <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="col-sm-12 col-md-6 col-lg-3">
                 <div id="tickets-table_length" class="dataTables_length">
                   <label class="d-inline-flex align-items-center">
                     Mostrar&nbsp;
@@ -233,7 +156,7 @@ export default {
                   </label>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="col-sm-12 col-md-6 col-lg-3">
                 <label class="d-inline-flex align-items-center">
                   <flat-pickr
                     v-model="selectedDate"
@@ -244,7 +167,7 @@ export default {
                 </label>
               </div>
               <!-- Search -->
-              <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="col-sm-12 col-md-6 col-lg-3">
                 <div id="tickets-table_filter" class="dataTables_filter text-md-right">
                   <label class="d-inline-flex align-items-center">
                     Buscador:
@@ -255,30 +178,17 @@ export default {
                       class="form-control form-control-sm ml-2"
                     ></b-form-input>
                   </label>
-                  <button
-                    id="btn-new-event"
-                    class="btn btn-primary btn-sm mx-md-2"
-                   
-                  >
-                   <!-- @click="showmodal = true" -->
-                    <i class="uil-plus mr-1"></i> Agregar producto
-                  </button>
-                  <!-- <b-modal
-                    v-model="showmodal"
-                    size="lg"
-                    title="Formulario producto"
-                    title-class="font-18"
-                    hide-footer
-                  >
-                    <product-form />
-                    <div class="text-right">
-                      <button type="submit" class="btn btn-success">Guardar</button>
-                      <b-button class="ml-1" variant="light" @click="hideModal">Cerrar</b-button>
-                    </div>
-                  </b-modal> -->
                 </div>
               </div>
               <!-- End search -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="tickets-table_filter" class="dataTables_filter text-md-right">
+                  <button id="btn-new-event" class="btn btn-primary btn-sm mx-md-2">
+                    <!-- @click="showmodal = true" -->
+                    <i class="uil-plus mr-1"></i> Agregar producto
+                  </button>
+                </div>
+              </div>
             </div>
             <!-- Table -->
             <div class="table-responsive mb-0">
@@ -354,7 +264,9 @@ export default {
                   </b-form-group>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 d-flex justify-content-center align-items-center flex-wrap">
+              <div
+                class="col-md-6 col-lg-4 d-flex justify-content-center align-items-center flex-wrap"
+              >
                 <div class="row">
                   <div class="col-md-12 d-flex align-items-center">
                     <h6 class="my-0">Sub-total:</h6>
