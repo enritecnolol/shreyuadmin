@@ -193,6 +193,18 @@ const productsAppsRoutes = [
     }
 ];
 
+const ordersAppsRoutes = [
+    {
+        path: '/apps/orders',
+        name: 'Orders',
+        header: 'Orden de compra',
+        icon: 'truck',
+        component: () => lazyLoadView(import('@views/pages/apps/orders/orders')),
+        meta: { authRequired: true },
+        props: (route) => ({ user: store.state.auth.currentUser || {} }),
+    }
+];
+
 const emailAppsRoutes = [
     {
         path: '/apps/email',
@@ -304,7 +316,8 @@ const appsRoutes = [
     ...clientsAppsRoutes,
     ...callAppsRoutes,
     ...timesheetAppsRoutes,
-    ...productsAppsRoutes
+    ...productsAppsRoutes,
+    ...ordersAppsRoutes,
 ]
 
 // pages
