@@ -2,12 +2,13 @@
 import appConfig from '@src/app.config'
 import Layout from '@layouts/main'
 import {tableData} from "@views/pages/apps/products/data-product";
+import productForm from "@components/form/productForm";
 export default {
     page: {
         title: 'Products',
         meta: [{ name: 'description', content: appConfig.description }],
     },
-    components: { Layout },
+    components: { Layout, productForm },
     data () {
         return {
             dateConfig: {
@@ -137,6 +138,7 @@ export default {
                                         title-class="font-18"
                                         hide-footer
                                     >
+                                        <product-form />
                                         <div class="text-right">
                                             <button type="submit" class="btn btn-success">Guardar</button>
                                             <b-button class="ml-1" variant="light" @click="hideModal">Cerrar</b-button>
