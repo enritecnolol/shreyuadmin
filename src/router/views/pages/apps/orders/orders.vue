@@ -42,13 +42,12 @@ export default {
       sortBy: 'age',
       sortDesc: false,
       fields: [
-        { key: 'image', sortable: true, label: 'Imagen' },
-        { key: 'name', sortable: true, label: 'Nombre' },
         { key: 'code', sortable: true, label: 'Código' },
-        { key: 'purchase_price', sortable: true, label: 'Precio compra' },
-        { key: 'sale_price', sortable: true, label: 'Precio venta' },
+        { key: 'name', sortable: true, label: 'Nombre' },
         { key: 'quantity', sortable: true, label: 'Cantidad' },
-        { key: 'unit_measurement', sortable: true, label: 'Unidad de medida' },
+        { key: 'hour', sortable: true, label: 'Hora' },
+        { key: 'hour_rate', sortable: true, label: 'Tarifa Horas' },
+        { key: 'total', sortable: true, label: 'Total' },
         { key: 'action', sortable: true, label: 'Acciones' }
       ],
     }
@@ -137,7 +136,7 @@ export default {
               </b-form>
             </div>
             <!-- End form -->
-            <div class="row mb-md-2">
+            <div class="row my-2">
               <div class="col-sm-12 col-md-6 col-lg-3">
                 <div id="tickets-table_length" class="dataTables_length">
                   <label class="d-inline-flex align-items-center">
@@ -181,7 +180,7 @@ export default {
               </div>
             </div>
             <!-- Table -->
-            <div class="table-responsive mb-0">
+            <div class="table-responsive mb-0 border">
               <b-table
                 :items="tableData"
                 :fields="fields"
@@ -217,17 +216,6 @@ export default {
                 </template>
               </b-table>
             </div>
-            <div class="row">
-              <div class="col">
-                <div class="dataTables_paginate paging_simple_numbers float-right">
-                  <ul class="pagination pagination-rounded mb-0">
-                    <!-- pagination -->
-                    <b-pagination v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- End Pagination -->
             <!-- === -->
             <div class="row">
               <div class="col-md-6 col-lg-8 row">
