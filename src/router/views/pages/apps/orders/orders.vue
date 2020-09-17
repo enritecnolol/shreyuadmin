@@ -89,7 +89,7 @@ export default {
       </div>
       <div class="col-md-9 col-xl-6 text-md-right">
         <div class="mt-4 mt-md-0"></div>
-      </div> -->
+      </div>-->
     </div>
     <div class="row">
       <div class="col-12">
@@ -128,16 +128,6 @@ export default {
                         class="form-control"
                         placeholder
                       ></flat-pickr>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Cliente"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-input id="input-horizontal" value></b-form-input>
                     </b-form-group>
                   </div>
                   <div class="col-lg-12">
@@ -237,10 +227,8 @@ export default {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
+            <!-- End Pagination -->
+            <!-- === -->
             <div class="row">
               <div class="col-md-6 col-lg-8 row">
                 <div class="col-md-6">
@@ -265,9 +253,9 @@ export default {
                 </div>
               </div>
               <div
-                class="col-md-6 col-lg-4 d-flex justify-content-center align-items-center flex-wrap"
+                class="col-md-6 col-lg-4 d-flex justify-content-center align-items-start flex-wrap"
               >
-                <div class="row">
+                <div class="row py-2">
                   <div class="col-md-12 d-flex align-items-center">
                     <h6 class="my-0">Sub-total:</h6>
                     <p class="my-0 mx-md-2">RD$ 0</p>
@@ -288,6 +276,7 @@ export default {
                 </div>
               </div>
             </div>
+            <!-- === -->
           </div>
         </div>
       </div>
