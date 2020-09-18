@@ -12,10 +12,6 @@ export default {
   components: { Layout },
   data () {
     return {
-      dateConfig: {
-        mode: 'range',
-      },
-      selectedDate: [new Date().setDate(new Date().getDate() - 7), new Date()],
       showmodal: false,
       tableData: tableData,
       title: 'Orden de compra',
@@ -81,15 +77,7 @@ export default {
 </script>
 <template>
   <Layout>
-    <!--        <PageHeader :title="title" :items="items" />-->
-    <div class="row page-title align-items-center py-2">
-      <!-- <div class="col-md-3 col-xl-6">
-        <h4 class="mb-1 mt-0">Ordenes de compra</h4>
-      </div>
-      <div class="col-md-9 col-xl-6 text-md-right">
-        <div class="mt-4 mt-md-0"></div>
-      </div>-->
-    </div>
+    <div class="row page-title align-items-center py-2"></div>
     <div class="row">
       <div class="col-12">
         <div class="card">
@@ -99,6 +87,26 @@ export default {
             <div>
               <b-form class="form-horizontal">
                 <div class="row">
+                  <div class="col-lg-6">
+                    <b-form-group
+                      label-cols-sm="12"
+                      label-cols-lg="12"
+                      label="Número Factura"
+                      label-for="input-horizontal"
+                    >
+                      <b-form-input id="input-horizontal" value></b-form-input>
+                    </b-form-group>
+                  </div>
+                  <div class="col-lg-6">
+                    <b-form-group
+                      label-cols-sm="12"
+                      label-cols-lg="12"
+                      label="NCF"
+                      label-for="input-horizontal"
+                    >
+                      <b-form-input id="input-horizontal" value></b-form-input>
+                    </b-form-group>
+                  </div>
                   <div class="col-lg-6">
                     <b-form-group
                       label-cols-sm="12"
@@ -137,26 +145,17 @@ export default {
             </div>
             <!-- End form -->
             <div class="row my-2">
-              <div class="col-sm-12 col-md-6 col-lg-3">
+              <!-- <div class="col-sm-12 col-md-6 col-lg-4">
                 <div id="tickets-table_length" class="dataTables_length">
                   <label class="d-inline-flex align-items-center">
                     Mostrar&nbsp;
                     <b-form-select v-model="perPage" size="sm" :options="pageOptions"></b-form-select>
                   </label>
                 </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3">
-                <label class="d-inline-flex align-items-center">
-                  <flat-pickr
-                    v-model="selectedDate"
-                    class="form-control"
-                    :config="dateConfig"
-                    name="date"
-                  ></flat-pickr>
-                </label>
-              </div>
+              </div>-->
+
               <!-- Search -->
-              <div class="col-sm-12 col-md-6 col-lg-3">
+              <!-- <div class="col-sm-12 col-md-6 col-lg-4">
                 <div id="tickets-table_filter" class="dataTables_filter text-md-right">
                   <label class="d-inline-flex align-items-center">
                     Buscador:
@@ -168,16 +167,8 @@ export default {
                     ></b-form-input>
                   </label>
                 </div>
-              </div>
+              </div>-->
               <!-- End search -->
-              <div class="col-sm-12 col-md-6 col-lg-3">
-                <div id="tickets-table_filter" class="dataTables_filter text-md-right">
-                  <button id="btn-new-event" class="btn btn-primary btn-sm mx-md-2">
-                    <!-- @click="showmodal = true" -->
-                    <i class="uil-plus mr-1"></i> Agregar producto
-                  </button>
-                </div>
-              </div>
             </div>
             <!-- Table -->
             <div class="table-responsive mb-0 border">
@@ -216,6 +207,12 @@ export default {
                 </template>
               </b-table>
             </div>
+            <div>
+              <button id="btn-new-event" class="btn btn-primary btn-sm mb-2 mt-3">
+                <!-- @click="showmodal = true" -->
+                <i class="uil-plus mr-1"></i> Agregar producto
+              </button>
+            </div>
             <!-- === -->
             <div class="row">
               <div class="col-md-6 col-lg-8 row">
@@ -223,17 +220,7 @@ export default {
                   <b-form-group
                     label-cols-sm="12"
                     label-cols-lg="12"
-                    label="Nota"
-                    label-for="input-horizontal"
-                  >
-                    <textarea v-model="textarea" class="form-control" :maxlength="225" rows="3"></textarea>
-                  </b-form-group>
-                </div>
-                <div class="col-md-6">
-                  <b-form-group
-                    label-cols-sm="12"
-                    label-cols-lg="12"
-                    label="Términos o acuerdo"
+                    label="Nota:"
                     label-for="input-horizontal"
                   >
                     <textarea v-model="textarea" class="form-control" :maxlength="225" rows="3"></textarea>
@@ -241,9 +228,9 @@ export default {
                 </div>
               </div>
               <div
-                class="col-md-6 col-lg-4 d-flex justify-content-center align-items-start flex-wrap"
+                class="col-md-6 col-lg-4 d-flex justify-content-center align-items-center flex-wrap"
               >
-                <div class="row py-2">
+                <div class="row py-2 border">
                   <div class="col-md-12 d-flex align-items-center">
                     <h6 class="my-0">Sub-total:</h6>
                     <p class="my-0 mx-md-2">RD$ 0</p>
@@ -256,6 +243,9 @@ export default {
                   <div class="col-md-12 d-flex align-items-center">
                     <h6 class="my-0">Impuesto:</h6>
                     <p class="my-0 mx-md-2">RD$ 0</p>
+                  </div>
+                  <div class="col-12">
+                    <hr class="my-1" />
                   </div>
                   <div class="col-md-12 d-flex align-items-center">
                     <h6 class="my-0">Total:</h6>
