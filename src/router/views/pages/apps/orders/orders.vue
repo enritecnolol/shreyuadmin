@@ -14,6 +14,7 @@ export default {
     return {
       showmodal: false,
       tableData: tableData,
+      sizes: ['Proveedor', 'Proveedor 2', 'Proveedor 3', 'Proveedor 4'],
       title: 'Orden de compra',
       items: [
         {
@@ -44,8 +45,14 @@ export default {
         { key: 'hour', sortable: true, label: 'Hora' },
         { key: 'hour_rate', sortable: true, label: 'Tarifa Horas' },
         { key: 'total', sortable: true, label: 'Total' },
-        { key: 'action', sortable: true, label: 'Acciones' }
+        { key: 'action', sortable: false, label: 'Acciones' }
       ],
+      selected: null,
+      options: [
+        { value: null, text: '' },
+        { value: 'a', text: 'Condicion 2' },
+        { value: { B: '3PO' }, text: 'Condicion 3' },
+      ]
     }
   },
   computed: {
@@ -87,7 +94,7 @@ export default {
             <div>
               <b-form class="form-horizontal">
                 <div class="row">
-                  <div class="col-lg-6">
+                  <div class="col-lg-4">
                     <b-form-group
                       label-cols-sm="12"
                       label-cols-lg="12"
@@ -97,7 +104,7 @@ export default {
                       <b-form-input id="input-horizontal" value></b-form-input>
                     </b-form-group>
                   </div>
-                  <div class="col-lg-6">
+                  <div class="col-lg-4">
                     <b-form-group
                       label-cols-sm="12"
                       label-cols-lg="12"
@@ -105,6 +112,40 @@ export default {
                       label-for="input-horizontal"
                     >
                       <b-form-input id="input-horizontal" value></b-form-input>
+                    </b-form-group>
+                  </div>
+                  <div class="col-lg-4">
+                    <b-form-group
+                      label-cols-sm="12"
+                      label-cols-lg="12"
+                      label="Número Documento"
+                      label-for="input-horizontal"
+                    >
+                      <b-form-input id="input-horizontal" value></b-form-input>
+                    </b-form-group>
+                  </div>
+                  <div class="col-lg-6">
+                    <b-form-group
+                      label-cols-sm="12"
+                      label-cols-lg="12"
+                      label="Condicion"
+                      label-for="input-horizontal"
+                    >
+                      <b-form-select v-model="selected" :options="options"></b-form-select>
+                    </b-form-group>
+                  </div>
+                  <div class="col-lg-6">
+                    <b-form-group
+                      label-cols-sm="12"
+                      label-cols-lg="12"
+                      label="Proveedores"
+                      label-for="my-list-id-input"
+                    >
+                      <b-form-input id="my-list-id-input" list="my-list-id"></b-form-input>
+                      <datalist id="my-list-id">
+                        <option>Opción ejemplo</option>
+                        <option v-for="size in sizes" :key="size">{{ size }}</option>
+                      </datalist>
                     </b-form-group>
                   </div>
                   <div class="col-lg-6">
@@ -191,15 +232,7 @@ export default {
                   <div>
                     <button
                       id="btn-new-event"
-                      class="btn btn-warning btn-sm mx-1 mx-md-2"
-                      @click="showmodal = true"
-                    >
-                      <i class="uil-edit"></i>
-                    </button>
-                    <button
-                      id="btn-new-event"
                       class="btn btn-danger btn-sm mx-1 mx-md-2"
-                      @click="showmodal = true"
                     >
                       <i class="uil-cancel"></i>
                     </button>
@@ -215,7 +248,7 @@ export default {
             </div>
             <!-- === -->
             <div class="row">
-              <div class="col-md-6 col-lg-8 row">
+              <div class="col-md-8 col-lg-9 row">
                 <div class="col-md-6">
                   <b-form-group
                     label-cols-sm="12"
@@ -228,28 +261,28 @@ export default {
                 </div>
               </div>
               <div
-                class="col-md-6 col-lg-4 d-flex justify-content-center align-items-center flex-wrap"
+                class="col-md-4 col-lg-3 d-flex justify-content-center align-items-center flex-wrap"
               >
                 <div class="row py-2 border">
-                  <div class="col-md-12 d-flex align-items-center">
-                    <h6 class="my-0">Sub-total:</h6>
-                    <p class="my-0 mx-md-2">RD$ 0</p>
+                  <div class="col-md-12 row no-gutters">
+                    <h6 class="col-6 m-0">Sub-total:</h6>
+                    <p class="col-6 m-0 text-right">RD$ 0</p>
                   </div>
-                  <div class="col-md-12 d-flex align-items-center">
-                    <h6 class="my-0">Descuento:</h6>
-                    <p class="my-0 mx-md-2">RD$ 0</p>
+                  <div class="col-md-12 row no-gutters">
+                    <h6 class="col-6 m-0">Descuento:</h6>
+                    <p class="col-6 m-0 text-right">RD$ 0</p>
                   </div>
 
-                  <div class="col-md-12 d-flex align-items-center">
-                    <h6 class="my-0">Impuesto:</h6>
-                    <p class="my-0 mx-md-2">RD$ 0</p>
+                  <div class="col-md-12 row no-gutters">
+                    <h6 class="col-6 m-0">ITBIS:</h6>
+                    <p class="col-6 m-0 text-right">RD$ 0</p>
                   </div>
                   <div class="col-12">
                     <hr class="my-1" />
                   </div>
-                  <div class="col-md-12 d-flex align-items-center">
-                    <h6 class="my-0">Total:</h6>
-                    <p class="my-0 mx-md-2">RD$ 0</p>
+                  <div class="col-md-12 row no-gutters">
+                    <h6 class="col-6 m-0">Total:</h6>
+                    <p class="col-6 m-0 text-right">RD$ 0</p>
                   </div>
                 </div>
               </div>
