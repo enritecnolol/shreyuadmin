@@ -186,7 +186,7 @@ const productsAppsRoutes = [
         path: '/apps/products',
         name: 'Productos',
         header: 'Productos',
-        icon: 'truck',
+        icon: 'box',
         component: () => lazyLoadView(import('@views/pages/apps/products/product-list')),
         meta: { authRequired: true },
         props: (route) => ({ user: store.state.auth.currentUser || {} }),
@@ -210,7 +210,7 @@ const vendorsAppsRoutes = [
         path: '/apps/vendors',
         name: 'proveedores',
         header: 'proveedores',
-        icon: 'truck',
+        icon: 'users',
         component: () => lazyLoadView(import('@views/pages/apps/vendors/vendors-list')),
         meta: { authRequired: true },
         props: (route) => ({ user: store.state.auth.currentUser || {} }),
@@ -251,6 +251,38 @@ const emailAppsRoutes = [
                 meta: { authRequired: true },
                 component: () =>
                     lazyLoadView(import('@views/pages/apps/email/emailcompose')),
+            },
+        ],
+    }
+];
+
+const techniciansAppsRoutes = [
+    {
+        path: '/apps/technicians',
+        name: 'Tecnicos',
+        icon: 'inbox',
+        meta: { authRequired: true },
+        // create a container component
+        component: {
+            render(c) {
+                return c('router-view')
+            },
+        },
+        props: (route) => ({ user: store.state.auth.currentUser || {} }),
+        children: [
+            {
+                name: 'Technicians List',
+                path: 'technicianslist',
+                meta: { authRequired: true },
+                component: () =>
+                    lazyLoadView(import('@views/pages/apps/technicians/technicians-list')),
+            },
+            {
+                path: 'servicereport',
+                name: 'Reporte de servicio',
+                meta: { authRequired: true },
+                component: () =>
+                    lazyLoadView(import('@views/pages/apps/technicians/service-report')),
             },
         ],
     }
@@ -330,7 +362,8 @@ const appsRoutes = [
     ...timesheetAppsRoutes,
     ...productsAppsRoutes,
     ...ordersAppsRoutes,
-    ...vendorsAppsRoutes
+    ...vendorsAppsRoutes,
+    ...techniciansAppsRoutes
 ]
 
 // pages
