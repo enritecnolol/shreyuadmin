@@ -217,44 +217,44 @@ const vendorsAppsRoutes = [
     }
 ];
 
-const emailAppsRoutes = [
-    {
-        path: '/apps/email',
-        name: 'Email',
-        icon: 'inbox',
-        meta: { authRequired: true },
-        // create a container component
-        component: {
-            render(c) {
-                return c('router-view')
-            },
-        },
-        props: (route) => ({ user: store.state.auth.currentUser || {} }),
-        children: [
-            {
-                name: 'Inbox',
-                path: 'inbox',
-                meta: { authRequired: true },
-                component: () =>
-                    lazyLoadView(import('@views/pages/apps/email/inbox')),
-            },
-            {
-                path: 'read',
-                name: 'Leer el correo electrónico',
-                meta: { authRequired: true },
-                component: () =>
-                    lazyLoadView(import('@views/pages/apps/email/reademail')),
-            },
-            {
-                path: 'compose',
-                name: 'Escribir correo',
-                meta: { authRequired: true },
-                component: () =>
-                    lazyLoadView(import('@views/pages/apps/email/emailcompose')),
-            },
-        ],
-    }
-];
+// const emailAppsRoutes = [
+//     {
+//         path: '/apps/email',
+//         name: 'Email',
+//         icon: 'inbox',
+//         meta: { authRequired: true },
+//         // create a container component
+//         component: {
+//             render(c) {
+//                 return c('router-view')
+//             },
+//         },
+//         props: (route) => ({ user: store.state.auth.currentUser || {} }),
+//         children: [
+//             {
+//                 name: 'Inbox',
+//                 path: 'inbox',
+//                 meta: { authRequired: true },
+//                 component: () =>
+//                     lazyLoadView(import('@views/pages/apps/email/inbox')),
+//             },
+//             {
+//                 path: 'read',
+//                 name: 'Leer el correo electrónico',
+//                 meta: { authRequired: true },
+//                 component: () =>
+//                     lazyLoadView(import('@views/pages/apps/email/reademail')),
+//             },
+//             {
+//                 path: 'compose',
+//                 name: 'Escribir correo',
+//                 meta: { authRequired: true },
+//                 component: () =>
+//                     lazyLoadView(import('@views/pages/apps/email/emailcompose')),
+//             },
+//         ],
+//     }
+// ];
 
 const techniciansAppsRoutes = [
     {
@@ -354,7 +354,7 @@ const taskAppsRoutes = [
 
 const appsRoutes = [
     ...calendarAppsRoutes,
-    ...emailAppsRoutes,
+    // ...emailAppsRoutes,
     ...projectAppsRoutes,
     ...taskAppsRoutes,
     ...clientsAppsRoutes,
