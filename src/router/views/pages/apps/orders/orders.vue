@@ -101,7 +101,7 @@ export default {
                         label-cols-md="4"
                         label="Proveedores"
                         label-for="my-list-id-input"
-                      
+
                       >
                         <b-form-input id="my-list-id-input" list="my-list-id"></b-form-input>
                         <datalist id="my-list-id">
@@ -117,7 +117,7 @@ export default {
                         label="Número Factura"
                         label-for="input-horizontal"
                       >
-                        <b-form-input id="input-horizontal" value></b-form-input>
+                        <b-form-input id="input-horizontal" style="width: 100px"></b-form-input>
                       </b-form-group>
                     </div>
                     <div>
@@ -127,7 +127,7 @@ export default {
                         label="NCF"
                         label-for="input-horizontal"
                       >
-                        <b-form-input id="input-horizontal" value></b-form-input>
+                        <b-form-input id="input-horizontal" style="width: 200px"></b-form-input>
                       </b-form-group>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default {
                         label="Número Documento"
                         label-for="input-horizontal"
                       >
-                        <b-form-input id="input-horizontal" value></b-form-input>
+                        <b-form-input id="input-horizontal" style="width: 100px"></b-form-input>
                       </b-form-group>
                     </div>
                     <div>
@@ -149,7 +149,7 @@ export default {
                         label="Condicion"
                         label-for="input-horizontal"
                       >
-                        <b-form-select v-model="selected" :options="options" ></b-form-select>
+                        <b-form-select v-model="selected" :options="options" style="width: 300px"></b-form-select>
                       </b-form-group>
                     </div>
 
@@ -165,6 +165,7 @@ export default {
                           :config="timePicker"
                           class="form-control"
                           placeholder
+                          style="width: 250px"
                         ></flat-pickr>
                       </b-form-group>
                     </div>
@@ -180,6 +181,7 @@ export default {
                           :config="timePicker"
                           class="form-control"
                           placeholder
+                          style="width: 250px"
                         ></flat-pickr>
                       </b-form-group>
                     </div>
@@ -255,7 +257,7 @@ export default {
                 <div class="col-md-6">
                   <b-form-group
                     label-cols-sm="12"
-                    
+
                     label="Nota:"
                     label-for="input-horizontal"
                   >
