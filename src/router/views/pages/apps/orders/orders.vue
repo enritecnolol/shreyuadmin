@@ -94,92 +94,98 @@ export default {
             <div>
               <b-form class="form-horizontal">
                 <div class="row">
-                  <div class="col-lg-4">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Número Factura"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-input id="input-horizontal" value></b-form-input>
-                    </b-form-group>
+                  <div class="col-md-6">
+                    <div>
+                      <b-form-group
+                        label-cols-sm="12"
+                        label-cols-md="4"
+                        label="Proveedores"
+                        label-for="my-list-id-input"
+                      
+                      >
+                        <b-form-input id="my-list-id-input" list="my-list-id"></b-form-input>
+                        <datalist id="my-list-id">
+                          <option>Opción ejemplo</option>
+                          <option v-for="size in sizes" :key="size">{{ size }}</option>
+                        </datalist>
+                      </b-form-group>
+                    </div>
+                    <div>
+                      <b-form-group
+                        label-cols-sm="12"
+                        label-cols-md="4"
+                        label="Número Factura"
+                        label-for="input-horizontal"
+                      >
+                        <b-form-input id="input-horizontal" value></b-form-input>
+                      </b-form-group>
+                    </div>
+                    <div>
+                      <b-form-group
+                        label-cols-sm="12"
+                        label-cols-md="4"
+                        label="NCF"
+                        label-for="input-horizontal"
+                      >
+                        <b-form-input id="input-horizontal" value></b-form-input>
+                      </b-form-group>
+                    </div>
                   </div>
-                  <div class="col-lg-4">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="NCF"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-input id="input-horizontal" value></b-form-input>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-4">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Número Documento"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-input id="input-horizontal" value></b-form-input>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Condicion"
-                      label-for="input-horizontal"
-                    >
-                      <b-form-select v-model="selected" :options="options"></b-form-select>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Proveedores"
-                      label-for="my-list-id-input"
-                    >
-                      <b-form-input id="my-list-id-input" list="my-list-id"></b-form-input>
-                      <datalist id="my-list-id">
-                        <option>Opción ejemplo</option>
-                        <option v-for="size in sizes" :key="size">{{ size }}</option>
-                      </datalist>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Fecha Factura"
-                      label-for="input-horizontal"
-                    >
-                      <flat-pickr
-                        v-model="time"
-                        :config="timePicker"
-                        class="form-control"
-                        placeholder
-                      ></flat-pickr>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-6">
-                    <b-form-group
-                      label-cols-sm="12"
-                      label-cols-lg="12"
-                      label="Fecha Vencimiento"
-                      label-for="input-horizontal"
-                    >
-                      <flat-pickr
-                        v-model="time"
-                        :config="timePicker"
-                        class="form-control"
-                        placeholder
-                      ></flat-pickr>
-                    </b-form-group>
-                  </div>
-                  <div class="col-lg-12">
-                    <tasks-form />
+                  <div class="col-md-6">
+                    <div>
+                      <b-form-group
+                        label-cols-sm="12"
+                        label-cols-md="4"
+                        label="Número Documento"
+                        label-for="input-horizontal"
+                      >
+                        <b-form-input id="input-horizontal" value></b-form-input>
+                      </b-form-group>
+                    </div>
+                    <div>
+                      <b-form-group
+                        label-cols-sm="12"
+                        label-cols-md="4"
+                        label="Condicion"
+                        label-for="input-horizontal"
+                      >
+                        <b-form-select v-model="selected" :options="options" ></b-form-select>
+                      </b-form-group>
+                    </div>
+
+                    <div>
+                      <b-form-group
+                        label-cols-sm="12"
+                        label-cols-md="4"
+                        label="Fecha Factura"
+                        label-for="input-horizontal"
+                      >
+                        <flat-pickr
+                          v-model="time"
+                          :config="timePicker"
+                          class="form-control"
+                          placeholder
+                        ></flat-pickr>
+                      </b-form-group>
+                    </div>
+                    <div>
+                      <b-form-group
+                        label-cols-sm="12"
+                        label-cols-md="4"
+                        label="Fecha Vencimiento"
+                        label-for="input-horizontal"
+                      >
+                        <flat-pickr
+                          v-model="time"
+                          :config="timePicker"
+                          class="form-control"
+                          placeholder
+                        ></flat-pickr>
+                      </b-form-group>
+                    </div>
+                    <div class="col-lg-12">
+                      <tasks-form />
+                    </div>
                   </div>
                 </div>
               </b-form>
@@ -230,10 +236,7 @@ export default {
                 </template>
                 <template v-slot:cell(action)>
                   <div>
-                    <button
-                      id="btn-new-event"
-                      class="btn btn-danger btn-sm mx-1 mx-md-2"
-                    >
+                    <button id="btn-new-event" class="btn btn-danger btn-sm mx-1 mx-md-2">
                       <i class="uil-cancel"></i>
                     </button>
                   </div>
@@ -252,7 +255,7 @@ export default {
                 <div class="col-md-6">
                   <b-form-group
                     label-cols-sm="12"
-                    label-cols-lg="12"
+                    
                     label="Nota:"
                     label-for="input-horizontal"
                   >
@@ -294,3 +297,13 @@ export default {
     </div>
   </Layout>
 </template>
+
+<style scoped>
+input, select{
+  height: 34px !important;
+}
+label{
+  padding: 0 !important;
+}
+
+</style>
