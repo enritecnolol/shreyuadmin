@@ -160,7 +160,7 @@ const callAppsRoutes = [
 const timesheetAppsRoutes = [
     {
         path: '/apps/timesheet',
-        name: 'Timesheet',
+        name: 'Hoja de tiempo',
         header: 'Hoja de tiempo',
         icon: 'clock',
         component: () => lazyLoadView(import('@views/pages/apps/timesheet/timesheet')),
@@ -196,7 +196,7 @@ const productsAppsRoutes = [
 const ordersAppsRoutes = [
     {
         path: '/apps/orders',
-        name: 'Orders',
+        name: 'Orden de Compra',
         header: 'Orden de compra',
         icon: 'truck',
         component: () => lazyLoadView(import('@views/pages/apps/orders/orders')),
@@ -208,7 +208,7 @@ const ordersAppsRoutes = [
 const vendorsAppsRoutes = [
     {
         path: '/apps/vendors',
-        name: 'proveedores',
+        name: 'Proveedores',
         header: 'proveedores',
         icon: 'users',
         component: () => lazyLoadView(import('@views/pages/apps/vendors/vendors-list')),
@@ -271,7 +271,7 @@ const techniciansAppsRoutes = [
         props: (route) => ({ user: store.state.auth.currentUser || {} }),
         children: [
             {
-                name: 'Technicians List',
+                name: 'Lista de técnicos',
                 path: 'technicianslist',
                 meta: { authRequired: true },
                 component: () =>
